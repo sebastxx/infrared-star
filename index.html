@@ -11,6 +11,7 @@
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
   <script src="js/tailwind.config.js"></script>
+  <script src="js/translations.js"></script>
 </head>
 
 <body
@@ -26,11 +27,14 @@
         </span>
       </a>
       <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-        <a class="text-sm font-medium hover:text-primary transition-colors px-4 py-2 hidden md:block"
-          href="#contact">Ingresá</a>
+        <div id="language-switcher" class="flex items-center space-x-2 mr-4">
+          <!-- Flags will be injected by JS -->
+        </div>
+        <a class="text-sm font-medium hover:text-primary transition-colors px-4 py-2 hidden md:block" href="#contact"
+          data-i18n="nav_contact" style="display:none;">Ingresá</a>
         <button
           class="text-black bg-primary hover:bg-opacity-90 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-full text-sm px-5 py-2.5 text-center transition-transform hover:scale-105"
-          type="button">
+          type="button" data-i18n="nav_contact">
           Hablemos
         </button>
         <button aria-controls="navbar-sticky" aria-expanded="false"
@@ -48,15 +52,15 @@
           class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
           <li>
             <a class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 dark:text-white dark:hover:text-primary dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 transition-colors"
-              href="#work">Proyectos</a>
+              href="#work" data-i18n="nav_projects">Proyectos</a>
           </li>
           <li>
             <a class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 dark:text-white dark:hover:text-primary dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 transition-colors"
-              href="#services">Servicios</a>
+              href="#services" data-i18n="nav_services">Servicios</a>
           </li>
           <li>
             <a class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 dark:text-white dark:hover:text-primary dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 transition-colors"
-              href="#about">Sobre mí</a>
+              href="#about" data-i18n="nav_about">Sobre mí</a>
           </li>
         </ul>
       </div>
@@ -72,35 +76,37 @@
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
         </span>
-        Disponible para proyectos
+        <span data-i18n="hero_badge">Disponible para proyectos</span>
       </span>
       <h1
         class="max-w-4xl mx-auto mb-6 text-5xl font-bold tracking-tight text-gray-900 md:text-7xl lg:text-8xl dark:text-white">
-        Diseñá más rápido <br />
+        <span data-i18n="hero_title_1">Diseñá más rápido</span> <br />
         <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-gray-700 dark:from-gray-400 dark:to-gray-600">con</span>
-        <span class="text-primary">intención.</span>
+          class="text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-gray-700 dark:from-gray-400 dark:to-gray-600"
+          data-i18n="hero_title_2">con</span>
+        <span class="text-primary" data-i18n="hero_title_3">intención.</span>
       </h1>
-      <p class="max-w-2xl mx-auto mb-10 text-lg font-normal text-gray-600 dark:text-gray-400 sm:text-xl md:px-16">
+      <p class="max-w-2xl mx-auto mb-10 text-lg font-normal text-gray-600 dark:text-gray-400 sm:text-xl md:px-16"
+        data-i18n="hero_description">
         Construyo productos digitales que se sienten naturales. Código limpio, diseño pixel-perfect e interacciones
         fluidas que le ahorran tiempo a tus usuarios.
       </p>
       <div class="flex flex-col gap-4 sm:flex-row sm:justify-center">
         <a class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-black transition-all bg-primary rounded-full hover:bg-opacity-90 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-lime-300 shadow-[0_0_20px_rgba(206,240,60,0.3)]"
           href="#work">
-          Mirá mis proyectos
+          <span data-i18n="hero_cta_projects">Mirá mis proyectos</span>
           <span class="material-icons-outlined ml-2 text-xl">arrow_forward</span>
         </a>
         <a class="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-gray-900 transition-all border border-gray-200 rounded-full dark:text-white dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 hover:border-transparent"
           href="#contact">
-          Contactame
+          <span data-i18n="hero_cta_contact">Contactame</span>
         </a>
       </div>
       <div
         class="mt-20 mx-auto max-w-2xl bg-surface-light dark:bg-surface-dark rounded-2xl border border-border-light dark:border-border-dark p-6 shadow-2xl relative group hover:border-primary/50 transition-colors duration-500">
         <div class="flex justify-between items-center mb-4 text-xs font-mono text-gray-400 uppercase tracking-widest">
-          <span>Rendimiento (100/100)</span>
-          <span>Tiempo de carga</span>
+          <span data-i18n="perf_label">Rendimiento (100/100)</span>
+          <span data-i18n="perf_time">Tiempo de carga</span>
         </div>
         <div class="flex items-end justify-between">
           <div class="w-full">
@@ -108,8 +114,8 @@
               <div class="h-full bg-primary w-[98%] shadow-[0_0_10px_#CEF03C]"></div>
             </div>
             <div class="flex justify-between mt-2 text-xs text-gray-500">
-              <span>CORE VITALS (APROBADO)</span>
-              <span class="text-primary font-bold">SÚPER RÁPIDO</span>
+              <span data-i18n="perf_status">CORE VITALS (APROBADO)</span>
+              <span class="text-primary font-bold" data-i18n="perf_speed">SÚPER RÁPIDO</span>
             </div>
           </div>
           <div class="ml-6 text-right">
@@ -123,7 +129,8 @@
   </section>
   <div
     class="py-12 border-y border-border-light dark:border-border-dark bg-surface-light/50 dark:bg-surface-dark/50 backdrop-blur-sm">
-    <p class="text-center text-xs font-bold tracking-widest text-gray-500 uppercase mb-8">Trabajo con las mejores
+    <p class="text-center text-xs font-bold tracking-widest text-gray-500 uppercase mb-8" data-i18n="tools_title">
+      Trabajo con las mejores
       herramientas</p>
     <div class="marquee-container transition-opacity duration-300">
       <div class="marquee-content flex items-center space-x-16 px-4">
@@ -269,12 +276,15 @@
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
         <span
-          class="text-xs font-bold tracking-widest text-primary uppercase border border-primary/20 bg-primary/5 px-2 py-1 rounded">Caso
+          class="text-xs font-bold tracking-widest text-primary uppercase border border-primary/20 bg-primary/5 px-2 py-1 rounded"
+          data-i18n="work_badge">Caso
           de Estudio</span>
         <h2 class="mt-4 text-3xl font-bold text-gray-900 md:text-5xl dark:text-white">
-          Mirá cómo las ideas se <span class="text-primary">transforman</span> en realidad
+          <span data-i18n="work_title_1">Mirá cómo las ideas se</span> <span class="text-primary"
+            data-i18n="work_title_2">transforman</span> <span data-i18n="work_title_3">en realidad</span>
         </h2>
-        <p class="mt-4 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Descubrí cómo los sistemas de diseño
+        <p class="mt-4 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-i18n="work_description">Descubrí cómo
+          los sistemas de diseño
           estructurados se convierten en productos pulidos en semanas, no meses.</p>
       </div>
       <div
@@ -295,11 +305,14 @@
             src="images/fintech-dashboard-video-placeholder.png" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
           <div class="relative z-10 text-center p-8">
-            <h3 class="text-4xl md:text-6xl font-bold text-white mb-4">Dashboard Fintech</h3>
-            <p class="text-gray-300 mb-8 max-w-md mx-auto">Una renovación completa de un sistema financiero legacy
+            <h3 class="text-4xl md:text-6xl font-bold text-white mb-4" data-i18n="work_card_title">Dashboard Fintech
+            </h3>
+            <p class="text-gray-300 mb-8 max-w-md mx-auto" data-i18n="work_card_desc">Una renovación completa de un
+              sistema financiero legacy
               enfocado en velocidad y accesibilidad.</p>
             <button
-              class="bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 px-8 py-3 rounded-full transition-all group-hover:bg-primary group-hover:text-black group-hover:border-primary font-medium">
+              class="bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 px-8 py-3 rounded-full transition-all group-hover:bg-primary group-hover:text-black group-hover:border-primary font-medium"
+              data-i18n="work_card_cta">
               Leé el caso de estudio
             </button>
           </div>
@@ -320,10 +333,11 @@
     <div class="max-w-7xl mx-auto">
       <div class="mb-16">
         <h2 class="text-3xl font-bold text-gray-900 md:text-5xl dark:text-white mb-6">
-          Terminá tu proyecto en <br />
-          <span class="text-primary">1/5 del tiempo</span>
+          <span data-i18n="services_title_1">Terminá tu proyecto en</span> <br />
+          <span class="text-primary" data-i18n="services_title_2">1/5 del tiempo</span>
         </h2>
-        <p class="text-gray-600 dark:text-gray-400 max-w-xl">Confiado por startups y equipos empresariales. Mi flujo de
+        <p class="text-gray-600 dark:text-gray-400 max-w-xl" data-i18n="services_desc">Confiado por startups y equipos
+          empresariales. Mi flujo de
           trabajo está optimizado para velocidad sin sacrificar calidad.</p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -333,8 +347,9 @@
             class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-black transition-colors text-primary">
             <span class="material-icons-outlined">draw</span>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Diseño UX/UI</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="service_uxui_title">Diseño UX/UI
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="service_uxui_desc">
             Experiencias de usuario intuitivas y interfaces atractivas. Wireframes, prototipos y diseños finales
             centrados en el usuario.
           </p>
@@ -345,8 +360,9 @@
             class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-black transition-colors text-primary">
             <span class="material-icons-outlined">brush</span>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Diseño Gráfico</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="service_graphic_title">Diseño
+            Gráfico</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="service_graphic_desc">
             Identidad visual, branding, logos, material publicitario y piezas gráficas para todos tus canales de
             comunicación.
           </p>
@@ -357,8 +373,9 @@
             class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-black transition-colors text-primary">
             <span class="material-icons-outlined">code</span>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Desarrollo Web</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="service_web_title">Desarrollo Web
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="service_web_desc">
             Sitios web y aplicaciones modernas con código limpio, rendimiento optimizado y diseño responsivo para todos
             los dispositivos.
           </p>
@@ -369,8 +386,9 @@
             class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-black transition-colors text-primary">
             <span class="material-icons-outlined">campaign</span>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Marketing Digital</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="service_marketing_title">Marketing
+            Digital</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="service_marketing_desc">
             Estrategias de marketing, campañas publicitarias, SEO, SEM y optimización de conversión para hacer crecer tu
             negocio.
           </p>
@@ -381,8 +399,9 @@
             class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-black transition-colors text-primary">
             <span class="material-icons-outlined">group</span>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Community Management</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="service_community_title">Community
+            Management</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="service_community_desc">
             Gestión de redes sociales, creación de contenido, engagement con tu audiencia y construcción de comunidad
             online.
           </p>
@@ -393,8 +412,9 @@
             class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-black transition-colors text-primary">
             <span class="material-icons-outlined">analytics</span>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Análisis de Datos</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="service_data_title">Análisis de
+            Datos</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="service_data_desc">
             Dashboards, visualización de datos, métricas clave y reportes accionables para tomar decisiones basadas en
             datos.
           </p>
@@ -405,8 +425,9 @@
             class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-black transition-colors text-primary">
             <span class="material-icons-outlined">palette</span>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Arte Visual</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="service_art_title">Arte Visual
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="service_art_desc">
             Ilustraciones, motion graphics, contenido visual para redes y piezas artísticas que capturan la esencia de
             tu marca.
           </p>
@@ -417,8 +438,9 @@
             class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-black transition-colors text-primary">
             <span class="material-icons-outlined">rocket_launch</span>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Optimización SEO</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="service_seo_title">Optimización
+            SEO</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="service_seo_desc">
             Auditorías técnicas, keywords research, optimización on-page y estrategias para mejorar tu posicionamiento
             orgánico.
           </p>
@@ -429,8 +451,9 @@
             class="w-12 h-12 rounded bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-black transition-colors text-primary">
             <span class="material-icons-outlined">lightbulb</span>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Consultoría Creativa</h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3" data-i18n="service_consulting_title">
+            Consultoría Creativa</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="service_consulting_desc">
             Asesoramiento integral combinando diseño, tecnología y estrategia para llevar tu proyecto al siguiente
             nivel.
           </p>
@@ -441,15 +464,17 @@
   <section class="py-24 px-6 relative overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <h2 class="text-center text-3xl font-bold text-gray-900 md:text-5xl dark:text-white mb-4">
-        Cómo mis clientes <span class="text-primary">recuperaron su tiempo</span>
+        <span data-i18n="testimonials_title_1">Cómo mis clientes</span> <span class="text-primary"
+          data-i18n="testimonials_title_2">recuperaron su tiempo</span>
       </h2>
-      <p class="text-center text-gray-600 dark:text-gray-400 mb-16">Feedback real de clientes, emprendedores, fundadores
+      <p class="text-center text-gray-600 dark:text-gray-400 mb-16" data-i18n="testimonials_desc">Feedback real de
+        clientes, emprendedores, fundadores
         y líderes de producto.
       </p>
       <div class="grid md:grid-cols-3 gap-6">
         <div class="p-8 rounded-2xl bg-surface-dark border border-border-dark relative">
           <span class="material-icons-outlined text-4xl text-primary/30 absolute top-6 left-6">format_quote</span>
-          <p class="text-gray-300 mb-8 mt-6 relative z-10 text-sm leading-relaxed">
+          <p class="text-gray-300 mb-8 mt-6 relative z-10 text-sm leading-relaxed" data-i18n="testimonial_1_text">
             "La velocidad de entrega fue increíble. Lo que normalmente le toma a nuestro equipo 3 semanas se hizo en 4
             días. La calidad del código es excelente."
           </p>
@@ -458,13 +483,13 @@
               src="images/client-1.png" />
             <div>
               <h4 class="text-white text-sm font-bold">Florencia Ledesma</h4>
-              <p class="text-xs text-gray-500">CTO • Innovar.ar</p>
+              <p class="text-xs text-gray-500" data-i18n="testimonial_1_role">CTO • Innovar.ar</p>
             </div>
           </div>
         </div>
         <div class="p-8 rounded-2xl bg-surface-dark border border-border-dark relative">
           <span class="material-icons-outlined text-4xl text-primary/30 absolute top-6 left-6">format_quote</span>
-          <p class="text-gray-300 mb-8 mt-6 relative z-10 text-sm leading-relaxed">
+          <p class="text-gray-300 mb-8 mt-6 relative z-10 text-sm leading-relaxed" data-i18n="testimonial_2_text">
             "Gestionó nuestra migración de sistema de diseño perfectamente. La transición de modo oscuro a claro fue
             impresionante."
           </p>
@@ -473,13 +498,13 @@
               src="images/client-2.png" />
             <div>
               <h4 class="text-white text-sm font-bold">Facundo Quiroga</h4>
-              <p class="text-xs text-gray-500">Fundador • DataSur</p>
+              <p class="text-xs text-gray-500" data-i18n="testimonial_2_role">Fundador • DataSur</p>
             </div>
           </div>
         </div>
         <div class="p-8 rounded-2xl bg-surface-dark border border-border-dark relative">
           <span class="material-icons-outlined text-4xl text-primary/30 absolute top-6 left-6">format_quote</span>
-          <p class="text-gray-300 mb-8 mt-6 relative z-10 text-sm leading-relaxed">
+          <p class="text-gray-300 mb-8 mt-6 relative z-10 text-sm leading-relaxed" data-i18n="testimonial_3_text">
             "Comunicación constante y resultados estelares. La nueva landing page aumentó nuestra tasa de conversión un
             15% inmediatamente."
           </p>
@@ -488,7 +513,7 @@
               src="images/client-3.png" />
             <div>
               <h4 class="text-white text-sm font-bold">Martín Rocchia</h4>
-              <p class="text-xs text-gray-500">Fundador • MateTech</p>
+              <p class="text-xs text-gray-500" data-i18n="testimonial_3_role">Fundador • MateTech</p>
             </div>
           </div>
         </div>
@@ -497,79 +522,88 @@
   </section>
   <section class="py-24 px-6 bg-surface-light dark:bg-black">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-center text-3xl font-bold text-gray-900 md:text-5xl dark:text-white mb-16">
-        Desbloqueá el poder del <br /> desarrollo profesional
-      </h2>
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 md:text-5xl dark:text-white mb-6">
+          <span data-i18n="pricing_title_1">Desbloqueá el poder del</span> <br /> <span
+            data-i18n="pricing_title_2">desarrollo profesional</span>
+        </h2>
+        <p class="text-gray-600 dark:text-gray-400 max-w-xl" data-i18n="pricing_desc">Confiado por startups y equipos
+          empresariales. Mi flujo de
+          trabajo está optimizado para velocidad sin sacrificar calidad.</p>
+      </div>
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <div
           class="p-8 rounded-3xl bg-white dark:bg-surface-dark border border-border-light dark:border-border-dark flex flex-col">
           <div class="mb-4">
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Retainer de Diseño</h3>
-            <p class="text-sm text-gray-500 mt-1">Soporte continuo para tu producto</p>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white" data-i18n="price_retainer_title">Retainer de
+              Diseño</h3>
+            <p class="text-sm text-gray-500 mt-1" data-i18n="price_retainer_desc">Soporte continuo para tu producto</p>
           </div>
           <div class="mb-6 flex items-baseline">
             <span class="text-4xl font-bold text-gray-900 dark:text-white">$3,000</span>
-            <span class="text-gray-500 ml-2">/mes</span>
+            <span class="text-gray-500 ml-2" data-i18n="price_retainer_period">/mes</span>
           </div>
           <a class="w-full py-3 px-6 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-medium text-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors mb-8"
             href="#">
-            Suscribite →
+            <span data-i18n="price_retainer_cta">Suscribite →</span>
           </a>
           <ul class="space-y-4 text-sm text-gray-600 dark:text-gray-400 flex-1">
             <li class="flex items-center gap-3">
               <span class="material-icons-outlined text-primary text-base">check_circle</span>
-              Solicitudes de diseño ilimitadas
+              <span data-i18n="price_retainer_feat_1">Solicitudes de diseño ilimitadas</span>
             </li>
             <li class="flex items-center gap-3">
               <span class="material-icons-outlined text-primary text-base">check_circle</span>
-              Entrega promedio de 2 días
+              <span data-i18n="price_retainer_feat_2">Entrega promedio de 2 días</span>
             </li>
             <li class="flex items-center gap-3">
               <span class="material-icons-outlined text-primary text-base">check_circle</span>
-              Pausa o cancela cuando quieras
+              <span data-i18n="price_retainer_feat_3">Pausa o cancela cuando quieras</span>
             </li>
             <li class="flex items-center gap-3">
               <span class="material-icons-outlined text-gray-500 text-base">check_circle</span>
-              Integración con Slack
+              <span data-i18n="price_retainer_feat_4">Integración con Slack</span>
             </li>
           </ul>
         </div>
         <div
           class="p-8 rounded-3xl bg-white dark:bg-surface-dark border border-primary/50 relative flex flex-col shadow-[0_0_30px_rgba(206,240,60,0.1)]">
-          <div class="absolute -top-3 right-8 bg-primary text-black text-xs font-bold px-3 py-1 rounded-full uppercase">
+          <div class="absolute -top-3 right-8 bg-primary text-black text-xs font-bold px-3 py-1 rounded-full uppercase"
+            data-i18n="price_project_tag">
             Más Popular</div>
           <div class="mb-4">
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Proyecto Completo</h3>
-            <p class="text-sm text-gray-500 mt-1">Diseño y desarrollo desde cero</p>
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white" data-i18n="price_project_title">Proyecto
+              Completo</h3>
+            <p class="text-sm text-gray-500 mt-1" data-i18n="price_project_desc">Diseño y desarrollo desde cero</p>
           </div>
           <div class="mb-6 flex items-baseline">
             <span class="text-4xl font-bold text-gray-900 dark:text-white">$8,500</span>
-            <span class="text-gray-500 ml-2">desde</span>
+            <span class="text-gray-500 ml-2" data-i18n="price_project_period">desde</span>
           </div>
           <a class="w-full py-3 px-6 rounded-full bg-primary text-black font-bold text-center hover:bg-opacity-90 transition-colors mb-8 shadow-lg shadow-primary/25"
             href="#">
-            Empezá →
+            <span data-i18n="price_project_cta">Empezá →</span>
           </a>
           <ul class="space-y-4 text-sm text-gray-600 dark:text-gray-400 flex-1">
             <li class="flex items-center gap-3">
               <span class="material-icons-outlined text-primary text-base">check_circle</span>
-              Diseño y branding personalizado
+              <span data-i18n="price_project_feat_1">Diseño y branding personalizado</span>
             </li>
             <li class="flex items-center gap-3">
               <span class="material-icons-outlined text-primary text-base">check_circle</span>
-              Desarrollo Full Stack
+              <span data-i18n="price_project_feat_2">Desarrollo Full Stack</span>
             </li>
             <li class="flex items-center gap-3">
               <span class="material-icons-outlined text-primary text-base">check_circle</span>
-              Integración con CMS
+              <span data-i18n="price_project_feat_3">Integración con CMS</span>
             </li>
             <li class="flex items-center gap-3">
               <span class="material-icons-outlined text-primary text-base">check_circle</span>
-              SEO y optimización de rendimiento
+              <span data-i18n="price_project_feat_4">SEO y optimización de rendimiento</span>
             </li>
             <li class="flex items-center gap-3">
               <span class="material-icons-outlined text-primary text-base">check_circle</span>
-              1 mes de soporte post-lanzamiento
+              <span data-i18n="price_project_feat_5">1 mes de soporte post-lanzamiento</span>
             </li>
           </ul>
         </div>
@@ -577,17 +611,18 @@
     </div>
   </section>
   <section class="py-24 px-6 max-w-3xl mx-auto">
-    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-8">Preguntas frecuentes</h3>
+    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-8" data-i18n="faq_title">Preguntas frecuentes</h3>
     <div class="space-y-4">
       <details
         class="group bg-surface-light dark:bg-surface-dark rounded-lg border border-border-light dark:border-border-dark overflow-hidden">
         <summary class="flex items-center justify-between p-4 cursor-pointer">
-          <span class="text-sm font-medium text-gray-900 dark:text-white">¿Cuánto tiempo suele llevar un
+          <span class="text-sm font-medium text-gray-900 dark:text-white" data-i18n="faq_1_q">¿Cuánto tiempo suele
+            llevar un
             proyecto?</span>
           <span
             class="material-icons-outlined transition-transform group-open:rotate-180 text-gray-500">expand_more</span>
         </summary>
-        <div class="px-4 pb-4 text-sm text-gray-600 dark:text-gray-400">
+        <div class="px-4 pb-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="faq_1_a">
           Una landing page suele estar lista en 1 o 2 semanas. Las webs más complejas pueden llevar de 4 a 8 semanas,
           dependiendo de qué tanto haya que desarrollar.
         </div>
@@ -595,11 +630,12 @@
       <details
         class="group bg-surface-light dark:bg-surface-dark rounded-lg border border-border-light dark:border-border-dark overflow-hidden">
         <summary class="flex items-center justify-between p-4 cursor-pointer">
-          <span class="text-sm font-medium text-gray-900 dark:text-white">¿Va a funcionar con mi equipo actual?</span>
+          <span class="text-sm font-medium text-gray-900 dark:text-white" data-i18n="faq_2_q">¿Va a funcionar con mi
+            equipo actual?</span>
           <span
             class="material-icons-outlined transition-transform group-open:rotate-180 text-gray-500">expand_more</span>
         </summary>
-        <div class="px-4 pb-4 text-sm text-gray-600 dark:text-gray-400">
+        <div class="px-4 pb-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="faq_2_a">
           ¡Sí, olvidate! Uso flujos de trabajo con Git estándar y me integro directo a tu Jira, Trello o Linear como uno
           más del equipo.
         </div>
@@ -607,11 +643,12 @@
       <details
         class="group bg-surface-light dark:bg-surface-dark rounded-lg border border-border-light dark:border-border-dark overflow-hidden">
         <summary class="flex items-center justify-between p-4 cursor-pointer">
-          <span class="text-sm font-medium text-gray-900 dark:text-white">¿Manejás el hosting y el mantenimiento?</span>
+          <span class="text-sm font-medium text-gray-900 dark:text-white" data-i18n="faq_3_q">¿Manejás el hosting y el
+            mantenimiento?</span>
           <span
             class="material-icons-outlined transition-transform group-open:rotate-180 text-gray-500">expand_more</span>
         </summary>
-        <div class="px-4 pb-4 text-sm text-gray-600 dark:text-gray-400">
+        <div class="px-4 pb-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="faq_3_a">
           Sí, obvio. Te configuro todo en Vercel o Netlify para que vuele, y también ofrezco planes para mantenerlo al
           día sin que vos te preocupes.
         </div>
@@ -619,11 +656,12 @@
       <details
         class="group bg-surface-light dark:bg-surface-dark rounded-lg border border-border-light dark:border-border-dark overflow-hidden">
         <summary class="flex items-center justify-between p-4 cursor-pointer">
-          <span class="text-sm font-medium text-gray-900 dark:text-white">¿Qué formas de pago aceptás?</span>
+          <span class="text-sm font-medium text-gray-900 dark:text-white" data-i18n="faq_4_q">¿Qué formas de pago
+            aceptás?</span>
           <span
             class="material-icons-outlined transition-transform group-open:rotate-180 text-gray-500">expand_more</span>
         </summary>
-        <div class="px-4 pb-4 text-sm text-gray-600 dark:text-gray-400">
+        <div class="px-4 pb-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="faq_4_a">
           Acepto transferencias bancarias, crypto (USDT/BTC) y PayPal. Generalmente pido un 50% de anticipo para
           arrancar y el 50% restante contra entrega.
         </div>
@@ -631,12 +669,13 @@
       <details
         class="group bg-surface-light dark:bg-surface-dark rounded-lg border border-border-light dark:border-border-dark overflow-hidden">
         <summary class="flex items-center justify-between p-4 cursor-pointer">
-          <span class="text-sm font-medium text-gray-900 dark:text-white">¿Incluís el diseño del logo o la
+          <span class="text-sm font-medium text-gray-900 dark:text-white" data-i18n="faq_5_q">¿Incluís el diseño del
+            logo o la
             identidad?</span>
           <span
             class="material-icons-outlined transition-transform group-open:rotate-180 text-gray-500">expand_more</span>
         </summary>
-        <div class="px-4 pb-4 text-sm text-gray-600 dark:text-gray-400">
+        <div class="px-4 pb-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="faq_5_a">
           Mi foco es el desarrollo y la interfaz (UI), pero te puedo dar una mano con un branding básico o recomendarte
           colegas que la rompen en identidad de marca.
         </div>
@@ -644,11 +683,12 @@
       <details
         class="group bg-surface-light dark:bg-surface-dark rounded-lg border border-border-light dark:border-border-dark overflow-hidden">
         <summary class="flex items-center justify-between p-4 cursor-pointer">
-          <span class="text-sm font-medium text-gray-900 dark:text-white">¿Tengo garantía post-lanzamiento?</span>
+          <span class="text-sm font-medium text-gray-900 dark:text-white" data-i18n="faq_6_q">¿Tengo garantía
+            post-lanzamiento?</span>
           <span
             class="material-icons-outlined transition-transform group-open:rotate-180 text-gray-500">expand_more</span>
         </summary>
-        <div class="px-4 pb-4 text-sm text-gray-600 dark:text-gray-400">
+        <div class="px-4 pb-4 text-sm text-gray-600 dark:text-gray-400" data-i18n="faq_6_a">
           Sí, tenés 30 días de garantía para cualquier ajuste menor o bug que aparezca. Si necesitás cambios grandes o
           funciones nuevas después, lo cotizamos aparte sin drama.
         </div>
@@ -656,11 +696,12 @@
     </div>
   </section>
   <section class="py-24 px-6 text-center">
-    <h2 class="text-3xl font-bold text-gray-900 md:text-5xl dark:text-white mb-8">Empezá hoy</h2>
+    <h2 class="text-3xl font-bold text-gray-900 md:text-5xl dark:text-white mb-8" data-i18n="cta_email_title">Empezá hoy
+    </h2>
     <a class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-black transition-all bg-primary rounded-full hover:bg-opacity-90 hover:scale-105 shadow-[0_0_20px_rgba(206,240,60,0.4)]"
       href="mailto:hello@example.com">
       <span class="material-icons-outlined mr-2">email</span>
-      Mandame un mail
+      <span data-i18n="cta_email_text">Mandame un mail</span>
     </a>
   </section>
   <footer class="py-12 px-6 border-t border-border-light dark:border-border-dark bg-surface-light dark:bg-black">
@@ -670,7 +711,7 @@
           <span class="w-5 h-5 bg-primary rounded-full block"></span>
           <span class="text-xl font-bold text-gray-900 dark:text-white">planet.ar</span>
         </div>
-        <p class="text-xs text-gray-500 max-w-xs">
+        <p class="text-xs text-gray-500 max-w-xs" data-i18n="footer_rights">
           Ejecución fluida de diseño a código para startups y visionarios.
           <br />© Copyright 2024. Todos los derechos reservados.
         </p>

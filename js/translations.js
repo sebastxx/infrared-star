@@ -280,6 +280,38 @@ const translations = {
     "price_project_feat_5": { "es": "1 mes de soporte post-lanzamiento", "en": "1 month post-launch support", "pt": "1 mês de suporte pós-lançamento" },
 
     // FAQ
+    // Case Study Page
+    "cs_nav_back": { "es": "← Volver al inicio", "en": "← Back to home", "pt": "← Voltar ao início" },
+    "cs_hero_title": { "es": "Dashboard Fintech DataSur", "en": "DataSur Fintech Dashboard", "pt": "Dashboard Fintech DataSur" },
+    "cs_meta_client": { "es": "CLIENTE", "en": "CLIENT", "pt": "CLIENTE" },
+    "cs_meta_role": { "es": "ROL", "en": "ROLE", "pt": "FUNÇÃO" },
+    "cs_meta_date": { "es": "FECHA", "en": "DATE", "pt": "DATA" },
+
+    "cs_client_val": { "es": "DataSur", "en": "DataSur", "pt": "DataSur" },
+    "cs_role_val": { "es": "Diseño UI/UX • Desarrollo Frontend", "en": "UI/UX Design • Frontend Dev", "pt": "Design UI/UX • Desenv. Frontend" },
+    "cs_date_val": { "es": "Octubre 2023", "en": "October 2023", "pt": "Outubro 2023" },
+
+    "cs_challenge_title": { "es": "El Desafío", "en": "The Challenge", "pt": "O Desafio" },
+    "cs_challenge_text": {
+        "es": "DataSur operaba con una plataforma legacy que sufría de graves problemas de usabilidad y rendimiento. Los usuarios reportaban frustración al navegar entre múltiples módulos desconectados, y la falta de adaptación móvil limitaba la operatividad del equipo en movimiento. El objetivo era unificar la experiencia y reducir drásticamente los tiempos de carga.",
+        "en": "DataSur operated with a legacy platform suffering from severe usability and performance issues. Users reported frustration navigating between multiple disconnected modules, and the lack of mobile adaptation limited the team's improved operability regarding movement. The goal was to unify the experience and drastically reduce load times.",
+        "pt": "A DataSur operava com uma plataforma legada que sofria de graves problemas de usabilidade e desempenho. Os usuários relatavam frustração ao navegar entre vários módulos desconectados, e a falta de adaptação móvel limitava a operabilidade da equipe em movimento. O objetivo era unificar a experiência e reduzir drasticamente os tempos de carregamento."
+    },
+
+    "cs_solution_title": { "es": "La Solución", "en": "The Solution", "pt": "A Solução" },
+    "cs_solution_text": {
+        "es": "Implementamos un sistema de diseño atómico completo para garantizar consistencia visual. Reescribimos el frontend utilizando Next.js para renderizado híbrido, logrando tiempos de carga instantáneos. Además, introdujimos un sistema de temas (Claro/Oscuro) que se adapta a las preferencias del sistema operativo del usuario.",
+        "en": "We implemented a complete atomic design system to ensure visual consistency. We rewrote the frontend using Next.js for hybrid rendering, achieving instant load times. Additionally, we introduced a theming system (Light/Dark) that adapts to the user's operating system preferences.",
+        "pt": "Implementamos um sistema de design atômico completo para garantir consistência visual. Reescrevemos o frontend usando Next.js para renderização híbrida, obtendo tempos de carregamento instantâneos. Além disso, introduzimos um sistema de temas (Claro/Escuro) que se adapta às preferências do sistema operacional do usuário."
+    },
+
+    "cs_results_title": { "es": "Los Resultados", "en": "The Results", "pt": "Os Resultados" },
+    "cs_results_text_1": { "es": "40% reducción en tiempo de tareas", "en": "40% reduction in task time", "pt": "40% de redução no tempo das tarefas" },
+    "cs_results_text_2": { "es": "Carga instantánea (< 100ms)", "en": "Instant load (< 100ms)", "pt": "Carregamento instantâneo (< 100ms)" },
+    "cs_results_text_3": { "es": "Adopción del 100% en 2 semanas", "en": "100% adoption in 2 weeks", "pt": "100% de adoção em 2 semanas" },
+
+    "cs_gallery_caption": { "es": "Vista detallada del panel de control principal y vistas móviles.", "en": "Detailed view of the main dashboard and mobile views.", "pt": "Visão detalhada do painel de controle principal e visualizações móveis." },
+
     "faq_title": { "es": "Preguntas frecuentes", "en": "Frequently asked questions", "pt": "Perguntas frequentes" },
 
     "faq_1_q": { "es": "¿Cuánto tiempo suele llevar un proyecto?", "en": "How long does a project usually take?", "pt": "Quanto tempo costuma levar um projeto?" },

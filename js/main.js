@@ -153,4 +153,58 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+
+    // Language Switcher Logic
+    const availableLanguages = ['es', 'en', 'pt'];
+    const flags = {
+        'es': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" class="w-6 h-auto shadow-sm rounded-sm transition-transform hover:scale-110 cursor-pointer" data-lang="es"><path fill="#75aadb" d="M0 0h900v600H0z"/><path fill="#fff" d="M0 200h900v200H0z"/><path fill="#f6b40e" d="M450 245c33.1 0 60 26.9 60 60s-26.9 60-60 60-60-26.9-60-60 26.9-60 60-60z"/></svg>`,
+        'en': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1235 650" class="w-6 h-auto shadow-sm rounded-sm transition-transform hover:scale-110 cursor-pointer" data-lang="en"><path fill="#b22234" d="M0 0h1235v650H0z"/><path fill="#fff" d="M0 50h1235v50H0zm0 100h1235v50H0zm0 100h1235v50H0zm0 100h1235v50H0zm0 100h1235v50H0zm0 100h1235v50H0z"/><path fill="#3c3b6e" d="M0 0h494v350H0z"/></svg>`,
+        'pt': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 500" class="w-6 h-auto shadow-sm rounded-sm transition-transform hover:scale-110 cursor-pointer" data-lang="pt"><path fill="#009c3b" d="M0 0h720v500H0z"/><path fill="#fdf409" d="M360 48L688 250 360 452 32 250z"/><circle cx="360" cy="250" r="88" fill="#002776"/><path fill="#fff" d="M360 250h720v30H0z" clip-path="circle(88px at 360px 250px)" transform="rotate(-15 360 250)"/></svg>`
+    };
+
+    let currentLang = localStorage.getItem('preferredLanguage') || 'es';
+
+    function setLanguage(lang) {
+        if (!translations) return;
+
+        currentLang = lang;
+        localStorage.setItem('preferredLanguage', lang);
+        document.documentElement.lang = lang;
+
+        // Update text content
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            if (translations[key] && translations[key][lang]) {
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = translations[key][lang];
+                } else {
+                    element.innerHTML = translations[key][lang];
+                }
+            }
+        });
+
+        renderLanguageSwitcher();
+    }
+
+    function renderLanguageSwitcher() {
+        const container = document.getElementById('language-switcher');
+        if (!container) return;
+
+        container.innerHTML = '';
+
+        availableLanguages.forEach(lang => {
+            if (lang !== currentLang) {
+                const button = document.createElement('button');
+                button.className = 'focus:outline-none';
+                button.innerHTML = flags[lang];
+                button.setAttribute('title', `Switch to ${lang.toUpperCase()}`);
+                button.onclick = () => setLanguage(lang);
+                container.appendChild(button);
+            }
+        });
+    }
+
+    // Initialize
+    setLanguage(currentLang);
+
 });
