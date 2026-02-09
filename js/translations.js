@@ -1,0 +1,338 @@
+const translations = {
+    // Navigation
+    "nav_projects": {
+        "es": "Proyectos",
+        "en": "Projects",
+        "pt": "Projetos"
+    },
+    "nav_services": {
+        "es": "Servicios",
+        "en": "Services",
+        "pt": "Serviços"
+    },
+    "nav_about": {
+        "es": "Sobre mí",
+        "en": "About me",
+        "pt": "Sobre mim"
+    },
+    "nav_contact": {
+        "es": "Hablemos",
+        "en": "Let's Talk",
+        "pt": "Vamos Conversar"
+    },
+
+    // Hero Section
+    "hero_badge": {
+        "es": "Disponible para proyectos",
+        "en": "Available for projects",
+        "pt": "Disponível para projetos"
+    },
+    "hero_title_1": {
+        "es": "Diseñá más rápido",
+        "en": "Design faster",
+        "pt": "Desenhe mais rápido"
+    },
+    "hero_title_2": {
+        "es": "con",
+        "en": "with",
+        "pt": "com"
+    },
+    "hero_title_3": {
+        "es": "intención.",
+        "en": "intention.",
+        "pt": "intenção."
+    },
+    "hero_description": {
+        "es": "Construyo productos digitales que se sienten naturales. Código limpio, diseño pixel-perfect e interacciones fluidas que le ahorran tiempo a tus usuarios.",
+        "en": "I build digital products that feel natural. Clean code, pixel-perfect design, and smooth interactions that save your users time.",
+        "pt": "Eu crio produtos digitais que parecem naturais. Código limpo, design pixel-perfect e interações fluidas que economizam o tempo dos seus usuários."
+    },
+    "hero_cta_projects": {
+        "es": "Mirá mis proyectos",
+        "en": "View my projects",
+        "pt": "Ver meus projetos"
+    },
+    "hero_cta_contact": {
+        "es": "Contactame",
+        "en": "Contact me",
+        "pt": "Contate-me"
+    },
+
+    // Performance Card
+    "perf_label": {
+        "es": "Rendimiento (100/100)",
+        "en": "Performance (100/100)",
+        "pt": "Desempenho (100/100)"
+    },
+    "perf_time": {
+        "es": "Tiempo de carga",
+        "en": "Load time",
+        "pt": "Tempo de carregamento"
+    },
+    "perf_status": {
+        "es": "CORE VITALS (APROBADO)",
+        "en": "CORE VITALS (PASSED)",
+        "pt": "CORE VITALS (APROVADO)"
+    },
+    "perf_speed": {
+        "es": "SÚPER RÁPIDO",
+        "en": "SUPER FAST",
+        "pt": "SUPER RÁPIDO"
+    },
+
+    // Tools Marquee
+    "tools_title": {
+        "es": "Trabajo con las mejores herramientas",
+        "en": "I work with the best tools",
+        "pt": "Trabalho com as melhores ferramentas"
+    },
+
+    // Work Section
+    "work_badge": {
+        "es": "Caso de Estudio",
+        "en": "Case Study",
+        "pt": "Estudo de Caso"
+    },
+    "work_title_1": {
+        "es": "Mirá cómo las ideas se",
+        "en": "See how ideas",
+        "pt": "Veja como as ideias"
+    },
+    "work_title_2": {
+        "es": "transforman",
+        "en": "transform",
+        "pt": "se transformam"
+    },
+    "work_title_3": {
+        "es": "en realidad",
+        "en": "into reality",
+        "pt": "em realidade"
+    },
+    "work_description": {
+        "es": "Descubrí cómo los sistemas de diseño estructurados se convierten en productos pulidos en semanas, no meses.",
+        "en": "Discover how structured design systems turn into polished products in weeks, not months.",
+        "pt": "Descubra como sistemas de design estruturados se tornam produtos polidos em semanas, não meses."
+    },
+    "work_card_title": {
+        "es": "Dashboard Fintech",
+        "en": "Fintech Dashboard",
+        "pt": "Dashboard Fintech"
+    },
+    "work_card_desc": {
+        "es": "Una renovación completa de un sistema financiero legacy enfocado en velocidad y accesibilidad.",
+        "en": "A complete overhaul of a legacy financial system focused on speed and accessibility.",
+        "pt": "Uma renovação completa de um sistema financeiro legado focado em velocidade e acessibilidade."
+    },
+    "work_card_cta": {
+        "es": "Leé el caso de estudio",
+        "en": "Read case study",
+        "pt": "Leia o estudo de caso"
+    },
+
+    // Services Section
+    "services_title_1": {
+        "es": "Terminá tu proyecto en",
+        "en": "Finish your project in",
+        "pt": "Termine seu projeto em"
+    },
+    "services_title_2": {
+        "es": "1/5 del tiempo",
+        "en": "1/5 of the time",
+        "pt": "1/5 do tempo"
+    },
+    "services_desc": {
+        "es": "Confiado por startups y equipos empresariales. Mi flujo de trabajo está optimizado para velocidad sin sacrificar calidad.",
+        "en": "Trusted by startups and enterprise teams. My workflow is optimized for speed without sacrificing quality.",
+        "pt": "Confiado por startups e equipes empresariais. Meu fluxo de trabalho é otimizado para velocidade sem sacrificar a qualidade."
+    },
+
+    // Service Cards
+    "service_uxui_title": { "es": "Diseño UX/UI", "en": "UX/UI Design", "pt": "Design UX/UI" },
+    "service_uxui_desc": {
+        "es": "Experiencias de usuario intuitivas y interfaces atractivas. Wireframes, prototipos y diseños finales centrados en el usuario.",
+        "en": "Intuitive user experiences and attractive interfaces. Wireframes, prototypes, and user-centered final designs.",
+        "pt": "Experiências de usuário intuitivas e interfaces atraentes. Wireframes, protótipos e designs finais centrados no usuário."
+    },
+
+    "service_graphic_title": { "es": "Diseño Gráfico", "en": "Graphic Design", "pt": "Design Gráfico" },
+    "service_graphic_desc": {
+        "es": "Identidad visual, branding, logos, material publicitario y piezas gráficas para todos tus canales de comunicación.",
+        "en": "Visual identity, branding, logos, advertising material, and graphic pieces for all your communication channels.",
+        "pt": "Identidade visual, branding, logotipos, material publicitário e peças gráficas para todos os seus canais de comunicação."
+    },
+
+    "service_web_title": { "es": "Desarrollo Web", "en": "Web Development", "pt": "Desenvolvimento Web" },
+    "service_web_desc": {
+        "es": "Sitios web y aplicaciones modernas con código limpio, rendimiento optimizado y diseño responsivo para todos los dispositivos.",
+        "en": "Modern websites and applications with clean code, optimized performance, and responsive design for all devices.",
+        "pt": "Sites e aplicativos modernos com código limpo, desempenho otimizado e design responsivo para todos os dispositivos."
+    },
+
+    "service_marketing_title": { "es": "Marketing Digital", "en": "Digital Marketing", "pt": "Marketing Digital" },
+    "service_marketing_desc": {
+        "es": "Estrategias de marketing, campañas publicitarias, SEO, SEM y optimización de conversión para hacer crecer tu negocio.",
+        "en": "Marketing strategies, ad campaigns, SEO, SEM, and conversion optimization to grow your business.",
+        "pt": "Estratégias de marketing, campanhas publicitárias, SEO, SEM e otimização de conversão para fazer crescer o seu negócio."
+    },
+
+    "service_community_title": { "es": "Community Management", "en": "Community Management", "pt": "Gestão de Comunidade" },
+    "service_community_desc": {
+        "es": "Gestión de redes sociales, creación de contenido, engagement con tu audiencia y construcción de comunidad online.",
+        "en": "Social media management, content creation, audience engagement, and online community building.",
+        "pt": "Gestão de redes sociais, criação de conteúdo, engajamento com seu público e construção de comunidade online."
+    },
+
+    "service_data_title": { "es": "Análisis de Datos", "en": "Data Analysis", "pt": "Análise de Dados" },
+    "service_data_desc": {
+        "es": "Dashboards, visualización de datos, métricas clave y reportes accionables para tomar decisiones basadas en datos.",
+        "en": "Dashboards, data visualization, key metrics, and actionable reports for data-driven decision making.",
+        "pt": "Dashboards, visualização de dados, métricas-chave e relatórios acionáveis para tomada de decisões baseadas em dados."
+    },
+
+    "service_art_title": { "es": "Arte Visual", "en": "Visual Art", "pt": "Arte Visual" },
+    "service_art_desc": {
+        "es": "Ilustraciones, motion graphics, contenido visual para redes y piezas artísticas que capturan la esencia de tu marca.",
+        "en": "Illustrations, motion graphics, visual content for social media, and artistic pieces that capture your brand's essence.",
+        "pt": "Ilustrações, motion graphics, conteúdo visual para redes e peças artísticas que capturam a essência da sua marca."
+    },
+
+    "service_seo_title": { "es": "Optimización SEO", "en": "SEO Optimization", "pt": "Otimização SEO" },
+    "service_seo_desc": {
+        "es": "Auditorías técnicas, keywords research, optimización on-page y estrategias para mejorar tu posicionamiento orgánico.",
+        "en": "Technical audits, keyword research, on-page optimization, and strategies to improve your organic ranking.",
+        "pt": "Auditorias técnicas, pesquisa de palavras-chave, otimização on-page e estratégias para melhorar seu posicionamento orgânico."
+    },
+
+    "service_consulting_title": { "es": "Consultoría Creativa", "en": "Creative Consulting", "pt": "Consultoria Criativa" },
+    "service_consulting_desc": {
+        "es": "Asesoramiento integral combinando diseño, tecnología y estrategia para llevar tu proyecto al siguiente nivel.",
+        "en": "Comprehensive advice combining design, technology, and strategy to take your project to the next level.",
+        "pt": "Assessoria integral combinando design, tecnologia e estratégia para levar seu projeto ao próximo nível."
+    },
+
+    // Testimonials
+    "testimonials_title_1": {
+        "es": "Cómo mis clientes",
+        "en": "How my clients",
+        "pt": "Como meus clientes"
+    },
+    "testimonials_title_2": {
+        "es": "recuperaron su tiempo",
+        "en": "reclaimed their time",
+        "pt": "recuperaram seu tempo"
+    },
+    "testimonials_desc": {
+        "es": "Feedback real de clientes, emprendedores, fundadores y líderes de producto.",
+        "en": "Real feedback from clients, entrepreneurs, founders, and product leaders.",
+        "pt": "Feedback real de clientes, empreendedores, fundadores e líderes de produto."
+    },
+    "testimonial_1_text": {
+        "es": "\"La velocidad de entrega fue increíble. Lo que normalmente le toma a nuestro equipo 3 semanas se hizo en 4 días. La calidad del código es excelente.\"",
+        "en": "\"The delivery speed was incredible. What usually takes our team 3 weeks was done in 4 days. The code quality is excellent.\"",
+        "pt": "\"A velocidade de entrega foi incrível. O que normalmente leva 3 semanas para nossa equipe foi feito em 4 dias. A qualidade do código é excelente.\""
+    },
+    "testimonial_1_role": { "es": "CTO • Innovar.ar", "en": "CTO • Innovar.ar", "pt": "CTO • Innovar.ar" },
+
+    "testimonial_2_text": {
+        "es": "\"Gestionó nuestra migración de sistema de diseño perfectamente. La transición de modo oscuro a claro fue impresionante.\"",
+        "en": "\"Managed our design system migration perfectly. The transition from dark to light mode was impressive.\"",
+        "pt": "\"Gerenciou nossa migração de sistema de design perfeitamente. A transição do modo escuro para o claro foi impressionante.\""
+    },
+    "testimonial_2_role": { "es": "Fundador • DataSur", "en": "Founder • DataSur", "pt": "Fundador • DataSur" },
+
+    "testimonial_3_text": {
+        "es": "\"Comunicación constante y resultados estelares. La nueva landing page aumentó nuestra tasa de conversión un 15% inmediatamente.\"",
+        "en": "\"Constant communication and stellar results. The new landing page increased our conversion rate by 15% immediately.\"",
+        "pt": "\"Comunicação constante e resultados estelares. A nova landing page aumentou nossa taxa de conversão em 15% imediatamente.\""
+    },
+    "testimonial_3_role": { "es": "Fundador • MateTech", "en": "Founder • MateTech", "pt": "Fundador • MateTech" },
+
+    // Pricing Section
+    "pricing_title_1": {
+        "es": "Desbloqueá el poder del",
+        "en": "Unlock the power of",
+        "pt": "Desbloqueie o poder do"
+    },
+    "pricing_title_2": {
+        "es": "desarrollo profesional",
+        "en": "professional development",
+        "pt": "desenvolvimento profissional"
+    },
+
+    "price_retainer_title": { "es": "Retainer de Diseño", "en": "Design Retainer", "pt": "Retainer de Design" },
+    "price_retainer_desc": { "es": "Soporte continuo para tu producto", "en": "Continuous support for your product", "pt": "Suporte contínuo para seu produto" },
+    "price_retainer_period": { "es": "/mes", "en": "/month", "pt": "/mês" },
+    "price_retainer_cta": { "es": "Suscribite →", "en": "Subscribe →", "pt": "Assinar →" },
+    "price_retainer_feat_1": { "es": "Solicitudes de diseño ilimitadas", "en": "Unlimited design requests", "pt": "Solicitações de design ilimitadas" },
+    "price_retainer_feat_2": { "es": "Entrega promedio de 2 días", "en": "Average 2-day delivery", "pt": "Entrega média de 2 dias" },
+    "price_retainer_feat_3": { "es": "Pausa o cancela cuando quieras", "en": "Pause or cancel anytime", "pt": "Pause ou cancele quando quiser" },
+    "price_retainer_feat_4": { "es": "Integración con Slack", "en": "Slack integration", "pt": "Integração com Slack" },
+
+    "price_project_tag": { "es": "Más Popular", "en": "Most Popular", "pt": "Mais Popular" },
+    "price_project_title": { "es": "Proyecto Completo", "en": "Full Project", "pt": "Projeto Completo" },
+    "price_project_desc": { "es": "Diseño y desarrollo desde cero", "en": "Design and development from scratch", "pt": "Design e desenvolvimento do zero" },
+    "price_project_period": { "es": "desde", "en": "starting at", "pt": "a partir de" },
+    "price_project_cta": { "es": "Empezá →", "en": "Start →", "pt": "Começar →" },
+    "price_project_feat_1": { "es": "Diseño y branding personalizado", "en": "Custom design and branding", "pt": "Design e branding personalizado" },
+    "price_project_feat_2": { "es": "Desarrollo Full Stack", "en": "Full Stack Development", "pt": "Desenvolvimento Full Stack" },
+    "price_project_feat_3": { "es": "Integración con CMS", "en": "CMS Integration", "pt": "Integração com CMS" },
+    "price_project_feat_4": { "es": "SEO y optimización de rendimiento", "en": "SEO and performance optimization", "pt": "SEO e otimização de desempenho" },
+    "price_project_feat_5": { "es": "1 mes de soporte post-lanzamiento", "en": "1 month post-launch support", "pt": "1 mês de suporte pós-lançamento" },
+
+    // FAQ
+    "faq_title": { "es": "Preguntas frecuentes", "en": "Frequently asked questions", "pt": "Perguntas frequentes" },
+
+    "faq_1_q": { "es": "¿Cuánto tiempo suele llevar un proyecto?", "en": "How long does a project usually take?", "pt": "Quanto tempo costuma levar um projeto?" },
+    "faq_1_a": {
+        "es": "Una landing page suele estar lista en 1 o 2 semanas. Las webs más complejas pueden llevar de 4 a 8 semanas, dependiendo de qué tanto haya que desarrollar.",
+        "en": "A landing page is usually ready in 1 or 2 weeks. More complex websites can take 4 to 8 weeks, depending on the scope of development.",
+        "pt": "Uma landing page costuma ficar pronta em 1 ou 2 semanas. Sites mais complexos podem levar de 4 a 8 semanas, dependendo do escopo do desenvolvimento."
+    },
+
+    "faq_2_q": { "es": "¿Va a funcionar con mi equipo actual?", "en": "Will it work with my current team?", "pt": "Vai funcionar com minha equipe atual?" },
+    "faq_2_a": {
+        "es": "¡Sí, olvidate! Uso flujos de trabajo con Git estándar y me integro directo a tu Jira, Trello o Linear como uno más del equipo.",
+        "en": "Yes, absolutely! I use standard Git workflows and integrate directly into your Jira, Trello, or Linear as just another team member.",
+        "pt": "Sim, com certeza! Uso fluxos de trabalho Git padrão e me integro diretamente ao seu Jira, Trello ou Linear como mais um membro da equipe."
+    },
+
+    "faq_3_q": { "es": "¿Manejás el hosting y el mantenimiento?", "en": "Do you handle hosting and maintenance?", "pt": "Você cuida da hospedagem e manutenção?" },
+    "faq_3_a": {
+        "es": "Sí, obvio. Te configuro todo en Vercel o Netlify para que vuele, y también ofrezco planes para mantenerlo al día sin que vos te preocupes.",
+        "en": "Yes, of course. I set everything up on Vercel or Netlify so it flies, and I also offer plans to keep it up to date without you worrying.",
+        "pt": "Sim, claro. Configuro tudo na Vercel ou Netlify para voar, e também ofereço planos para mantê-lo atualizado sem que você se preocupe."
+    },
+
+    "faq_4_q": { "es": "¿Qué formas de pago aceptás?", "en": "What payment methods do you accept?", "pt": "Quais formas de pagamento você aceita?" },
+    "faq_4_a": {
+        "es": "Acepto transferencias bancarias, crypto (USDT/BTC) y PayPal. Generalmente pido un 50% de anticipo para arrancar y el 50% restante contra entrega.",
+        "en": "I accept bank transfers, crypto (USDT/BTC), and PayPal. I generally ask for a 50% upfront payment to start and the remaining 50% upon delivery.",
+        "pt": "Aceito transferências bancárias, criptomoedas (USDT/BTC) e PayPal. Geralmente peço 50% de adiantamento para começar e os 50% restantes na entrega."
+    },
+
+    "faq_5_q": { "es": "¿Incluís el diseño del logo o la identidad?", "en": "Do you include logo design or identity?", "pt": "Você inclui design de logotipo ou identidade?" },
+    "faq_5_a": {
+        "es": "Mi foco es el desarrollo y la interfaz (UI), pero te puedo dar una mano con un branding básico o recomendarte colegas que la rompen en identidad de marca.",
+        "en": "My focus is on development and interface (UI), but I can help with basic branding or recommend colleagues who excel at brand identity.",
+        "pt": "Meu foco é desenvolvimento e interface (UI), mas posso ajudar com branding básico ou recomendar colegas que mandam muito bem em identidade de marca."
+    },
+
+    "faq_6_q": { "es": "¿Tengo garantía post-lanzamiento?", "en": "Do I have a post-launch warranty?", "pt": "Tenho garantia pós-lançamento?" },
+    "faq_6_a": {
+        "es": "Sí, tenés 30 días de garantía para cualquier ajuste menor o bug que aparezca. Si necesitás cambios grandes o funciones nuevas después, lo cotizamos aparte sin drama.",
+        "en": "Yes, you have a 30-day warranty for any minor adjustments or bugs that appear. If you need major changes or new features later, we can quote that separately, no problem.",
+        "pt": "Sim, você tem 30 dias de garantia para qualquer ajuste menor ou bug que apareça. Se precisar de grandes mudanças ou novos recursos depois, orçamos à parte sem problemas."
+    },
+
+    // Global & Footer
+    "footer_rights": {
+        "es": "Ejecución fluida de diseño a código para startups y visionarios.<br />© Copyright 2024. Todos los derechos reservados.",
+        "en": "Seamless design-to-code execution for startups and visionaries.<br />© Copyright 2024. All rights reserved.",
+        "pt": "Execução fluida de design para código para startups e visionários.<br />© Copyright 2024. Todos os direitos reservados."
+    },
+    "footer_social_title": { "es": "Redes", "en": "Social", "pt": "Redes" },
+    "footer_legal_title": { "es": "Legal", "en": "Legal", "pt": "Legal" },
+    "footer_terms": { "es": "Términos", "en": "Terms", "pt": "Termos" },
+    "footer_privacy": { "es": "Privacidad", "en": "Privacy", "pt": "Privacidade" },
+    "cta_email": { "es": "Mandame un mail", "en": "Send me an email", "pt": "Mande um e-mail" }
+};
