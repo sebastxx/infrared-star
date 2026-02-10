@@ -12,8 +12,8 @@ tailwind.config = {
                 "border-light": "#E5E7EB",
             },
             fontFamily: {
-                display: ["Inter", "sans-serif"],
-                body: ["Inter", "sans-serif"],
+                display: ["Space Grotesk", "sans-serif"],
+                body: ["Space Grotesk", "sans-serif"],
             },
             borderRadius: {
                 DEFAULT: "0.5rem",

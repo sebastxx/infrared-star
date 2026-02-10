@@ -1,5 +1,10 @@
 const translations = {
     // Navigation
+    "nav_home": {
+        "es": "Inicio",
+        "en": "Home",
+        "pt": "Início"
+    },
     "nav_projects": {
         "es": "Proyectos",
         "en": "Projects",
@@ -89,9 +94,9 @@ const translations = {
 
     // Work Section
     "work_badge": {
-        "es": "Caso de Estudio",
-        "en": "Case Study",
-        "pt": "Estudo de Caso"
+        "es": "Estudios de Caso",
+        "en": "Case Studies",
+        "pt": "Estudos de Caso"
     },
     "work_title_1": {
         "es": "Mirá cómo las ideas se",
@@ -124,9 +129,34 @@ const translations = {
         "pt": "Uma renovação completa de um sistema financeiro legado focado em velocidade e acessibilidade."
     },
     "work_card_cta": {
-        "es": "Leé el caso de estudio",
+        "es": "Leé el estudio de caso",
         "en": "Read case study",
         "pt": "Leia o estudo de caso"
+    },
+
+    // New Project Cards
+    "project_logofolio_badge": { "es": "Branding", "en": "Branding", "pt": "Branding" },
+    "project_logofolio_title": { "es": "Logofolio", "en": "Logofolio", "pt": "Logofólio" },
+    "project_logofolio_desc": {
+        "es": "Colección de identidades visuales y logotipos para marcas emergentes.",
+        "en": "Collection of visual identities and logos for emerging brands.",
+        "pt": "Coleção de identidades visuais e logotipos para marcas emergentes."
+    },
+
+    "project_mindfulness_badge": { "es": "Diseño UI/UX", "en": "UI/UX Design", "pt": "Design UI/UX" },
+    "project_mindfulness_title": { "es": "App de Mindfulness", "en": "Mindfulness App", "pt": "App de Mindfulness" },
+    "project_mindfulness_desc": {
+        "es": "Diseño de interfaz para una app de meditación y bienestar mental.",
+        "en": "Interface design for a meditation and mental wellness app.",
+        "pt": "Design de interface para um aplicativo de meditação e bem-estar mental."
+    },
+
+    "project_graphic_badge": { "es": "Diseño Gráfico", "en": "Graphic Design", "pt": "Design Gráfico" },
+    "project_graphic_title": { "es": "Piezas Visuales", "en": "Visual Assets", "pt": "Peças Visuais" },
+    "project_graphic_desc": {
+        "es": "Branding completo y piezas gráficas para comunicación digital.",
+        "en": "Full branding and graphic assets for digital communication.",
+        "pt": "Branding completo e peças gráficas para comunicação digital."
     },
 
     // Services Section
@@ -261,6 +291,9 @@ const translations = {
 
     "price_retainer_title": { "es": "Retainer de Diseño", "en": "Design Retainer", "pt": "Retainer de Design" },
     "price_retainer_desc": { "es": "Soporte continuo para tu producto", "en": "Continuous support for your product", "pt": "Suporte contínuo para seu produto" },
+    "price_retainer_from": { "es": "desde", "en": "from", "pt": "a partir de" },
+    "price_retainer_amount": { "es": "$30.000", "en": "$30", "pt": "R$150" },
+    "price_retainer_currency": { "es": "ARS", "en": "USD", "pt": "BRL" },
     "price_retainer_period": { "es": "/mes", "en": "/month", "pt": "/mês" },
     "price_retainer_cta": { "es": "Suscribite →", "en": "Subscribe →", "pt": "Assinar →" },
     "price_retainer_feat_1": { "es": "Solicitudes de diseño ilimitadas", "en": "Unlimited design requests", "pt": "Solicitações de design ilimitadas" },
@@ -272,6 +305,8 @@ const translations = {
     "price_project_title": { "es": "Proyecto Completo", "en": "Full Project", "pt": "Projeto Completo" },
     "price_project_desc": { "es": "Diseño y desarrollo desde cero", "en": "Design and development from scratch", "pt": "Design e desenvolvimento do zero" },
     "price_project_period": { "es": "desde", "en": "starting at", "pt": "a partir de" },
+    "price_project_amount": { "es": "$70.000", "en": "$60", "pt": "R$350" },
+    "price_project_currency": { "es": "ARS", "en": "USD", "pt": "BRL" },
     "price_project_cta": { "es": "Empezá →", "en": "Start →", "pt": "Começar →" },
     "price_project_feat_1": { "es": "Diseño y branding personalizado", "en": "Custom design and branding", "pt": "Design e branding personalizado" },
     "price_project_feat_2": { "es": "Desarrollo Full Stack", "en": "Full Stack Development", "pt": "Desenvolvimento Full Stack" },
@@ -356,11 +391,20 @@ const translations = {
         "pt": "Sim, você tem 30 dias de garantia para qualquer ajuste menor ou bug que apareça. Se precisar de grandes mudanças ou novos recursos depois, orçamos à parte sem problemas."
     },
 
+    // About Me Section
+    "about_title": { "es": "Sobre mí", "en": "About me", "pt": "Sobre mim" },
+    "about_name": { "es": "Andrés Sebastián", "en": "Andrés Sebastián", "pt": "Andrés Sebastián" },
+    "about_desc": {
+        "es": "Soy un diseñador y desarrollador apasionado por crear experiencias digitales que impactan. Combino la creatividad del diseño con la precisión del código para construir productos que no solo se ven bien, sino que realmente funcionen. Mi objetivo es ayudar a startups y visionarios a transformar sus ideas en realidad.",
+        "en": "I am a designer and developer passionate about creating digital experiences that make an impact. I combine design creativity with code precision to build products that not only look good but truly work. My goal is to help startups and visionaries turn their ideas into reality.",
+        "pt": "Sou um designer e desenvolvedor apaixonado por criar experiências digitais que impactam. Combino a criatividade do design com a precisão do código para construir produtos que não apenas parecem bons, mas realmente funcionam. Meu objetivo é ajudar startups e visionários a transformar suas ideias em realidade."
+    },
+
     // Global & Footer
     "footer_rights": {
-        "es": "Ejecución fluida de diseño a código para startups y visionarios.<br />© Copyright 2024. Todos los derechos reservados.",
-        "en": "Seamless design-to-code execution for startups and visionaries.<br />© Copyright 2024. All rights reserved.",
-        "pt": "Execução fluida de design para código para startups e visionários.<br />© Copyright 2024. Todos os direitos reservados."
+        "es": "Ejecución fluida de diseño a código para startups y visionarios.<br />© Copyright 2026. Todos los derechos reservados.",
+        "en": "Seamless design-to-code execution for startups and visionaries.<br />© Copyright 2026. All rights reserved.",
+        "pt": "Execução fluida de design para código para startups e visionários.<br />© Copyright 2026. Todos os direitos reservados."
     },
     "footer_social_title": { "es": "Redes", "en": "Social", "pt": "Redes" },
     "footer_legal_title": { "es": "Legal", "en": "Legal", "pt": "Legal" },

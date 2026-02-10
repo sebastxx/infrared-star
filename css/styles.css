@@ -1,5 +1,21 @@
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.logo-text .logo-hover {
+    display: none;
+}
+
+.logo-text .logo-default {
+    display: inline;
+}
+
+.logo-text:hover .logo-hover {
+    display: inline;
+}
+
+.logo-text:hover .logo-default {
+    display: none;
 }
 
 .marquee-container {

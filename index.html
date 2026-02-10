@@ -5,7 +5,9 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Portafolio Creativo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
   <link href="css/styles.css" rel="stylesheet" />
 
@@ -21,9 +23,13 @@
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-6 py-4">
       <a class="flex items-center space-x-2 rtl:space-x-reverse" href="#">
         <span
-          class="self-center text-xl font-bold whitespace-nowrap text-gray-900 dark:text-white flex items-center gap-2">
-          <span class="w-6 h-6 bg-primary rounded-full block"></span>
-          planet.ar
+          class="logo-text self-center text-xl font-bold whitespace-nowrap text-gray-900 dark:text-white flex items-center gap-2"
+          style="font-family: 'Exo 2', sans-serif; font-weight: 900; font-style: italic;">
+          <span class="relative flex h-4 w-4">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-4 w-4 bg-primary"></span>
+          </span>
+          <span class="logo-default">planetar</span><span class="logo-hover">plạnetạr</span>
         </span>
       </a>
       <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -32,11 +38,10 @@
         </div>
         <a class="text-sm font-medium hover:text-primary transition-colors px-4 py-2 hidden md:block" href="#contact"
           data-i18n="nav_contact" style="display:none;">Ingresá</a>
-        <button
-          class="text-black bg-primary hover:bg-opacity-90 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-full text-sm px-5 py-2.5 text-center transition-transform hover:scale-105"
-          type="button" data-i18n="nav_contact">
+        <a class="text-black bg-primary hover:bg-opacity-90 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-full text-sm px-5 py-2.5 text-center transition-transform hover:scale-105"
+          href="#about" data-i18n="nav_contact">
           Hablemos
-        </button>
+        </a>
         <button aria-controls="navbar-sticky" aria-expanded="false"
           class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           data-collapse-toggle="navbar-sticky" type="button">
@@ -52,15 +57,15 @@
           class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
           <li>
             <a class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 dark:text-white dark:hover:text-primary dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 transition-colors"
+              href="#" data-i18n="nav_home">Inicio</a>
+          </li>
+          <li>
+            <a class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 dark:text-white dark:hover:text-primary dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 transition-colors"
               href="#work" data-i18n="nav_projects">Proyectos</a>
           </li>
           <li>
             <a class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 dark:text-white dark:hover:text-primary dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 transition-colors"
               href="#services" data-i18n="nav_services">Servicios</a>
-          </li>
-          <li>
-            <a class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 dark:text-white dark:hover:text-primary dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 transition-colors"
-              href="#about" data-i18n="nav_about">Sobre mí</a>
           </li>
         </ul>
       </div>
@@ -276,9 +281,13 @@
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16">
         <span
-          class="text-xs font-bold tracking-widest text-primary uppercase border border-primary/20 bg-primary/5 px-2 py-1 rounded"
-          data-i18n="work_badge">Caso
-          de Estudio</span>
+          class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-primary uppercase border border-primary/20 bg-primary/5 px-3 py-1 rounded-full">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+          </span>
+          <span data-i18n="work_badge">Estudios de Caso</span>
+        </span>
         <h2 class="mt-4 text-3xl font-bold text-gray-900 md:text-5xl dark:text-white">
           <span data-i18n="work_title_1">Mirá cómo las ideas se</span> <span class="text-primary"
             data-i18n="work_title_2">transforman</span> <span data-i18n="work_title_3">en realidad</span>
@@ -303,8 +312,70 @@
           <button
             class="bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 px-8 py-3 rounded-full transition-all group-hover:bg-primary group-hover:text-black group-hover:border-primary font-medium"
             data-i18n="work_card_cta" onclick="window.location.href='case-study.html'">
-            Leé el caso de estudio
+            Leé el estudio de caso
           </button>
+        </div>
+
+      </div>
+
+      <!-- Secondary Project Cards Grid -->
+      <div class="grid md:grid-cols-3 gap-6 mt-8">
+
+        <!-- Card: Logofolio -->
+        <div
+          class="relative group rounded-2xl overflow-hidden border border-border-light dark:border-border-dark shadow-xl aspect-[4/3] cursor-pointer">
+          <div class="absolute inset-0 bg-gradient-to-br from-violet-600 via-purple-700 to-indigo-900"></div>
+          <div
+            class="absolute inset-0 flex items-center justify-center opacity-10 group-hover:opacity-20 transition-opacity duration-500">
+            <span class="material-icons-outlined" style="font-size: 180px;">palette</span>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div class="relative z-10 flex flex-col justify-end h-full p-6">
+            <span class="text-xs font-bold tracking-widest text-violet-300 uppercase mb-2"
+              data-i18n="project_logofolio_badge">Branding</span>
+            <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-violet-200 transition-colors"
+              data-i18n="project_logofolio_title">Logofolio</h3>
+            <p class="text-gray-300 text-sm" data-i18n="project_logofolio_desc">Colección de identidades visuales y
+              logotipos para marcas emergentes.</p>
+          </div>
+        </div>
+
+        <!-- Card: Mindfulness App -->
+        <div
+          class="relative group rounded-2xl overflow-hidden border border-border-light dark:border-border-dark shadow-xl aspect-[4/3] cursor-pointer">
+          <div class="absolute inset-0 bg-gradient-to-br from-teal-500 via-cyan-600 to-blue-800"></div>
+          <div
+            class="absolute inset-0 flex items-center justify-center opacity-10 group-hover:opacity-20 transition-opacity duration-500">
+            <span class="material-icons-outlined" style="font-size: 180px;">self_improvement</span>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div class="relative z-10 flex flex-col justify-end h-full p-6">
+            <span class="text-xs font-bold tracking-widest text-teal-300 uppercase mb-2"
+              data-i18n="project_mindfulness_badge">UI/UX Design</span>
+            <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-teal-200 transition-colors"
+              data-i18n="project_mindfulness_title">App de Mindfulness</h3>
+            <p class="text-gray-300 text-sm" data-i18n="project_mindfulness_desc">Diseño de interfaz para una app de
+              meditación y bienestar mental.</p>
+          </div>
+        </div>
+
+        <!-- Card: Diseño Gráfico -->
+        <div
+          class="relative group rounded-2xl overflow-hidden border border-border-light dark:border-border-dark shadow-xl aspect-[4/3] cursor-pointer">
+          <div class="absolute inset-0 bg-gradient-to-br from-amber-500 via-orange-600 to-rose-700"></div>
+          <div
+            class="absolute inset-0 flex items-center justify-center opacity-10 group-hover:opacity-20 transition-opacity duration-500">
+            <span class="material-icons-outlined" style="font-size: 180px;">brush</span>
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+          <div class="relative z-10 flex flex-col justify-end h-full p-6">
+            <span class="text-xs font-bold tracking-widest text-amber-300 uppercase mb-2"
+              data-i18n="project_graphic_badge">Diseño Gráfico</span>
+            <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-amber-200 transition-colors"
+              data-i18n="project_graphic_title">Piezas Visuales</h3>
+            <p class="text-gray-300 text-sm" data-i18n="project_graphic_desc">Branding completo y piezas gráficas para
+              comunicación digital.</p>
+          </div>
         </div>
 
       </div>
@@ -461,8 +532,9 @@
             días. La calidad del código es excelente."
           </p>
           <div class="flex items-center gap-4">
-            <img alt="Cliente 1" class="w-10 h-10 rounded-full grayscale hover:grayscale-0 transition-all"
-              src="images/client-1.png" />
+            <img alt="Florencia Ledesma"
+              class="w-10 h-10 rounded-full grayscale hover:grayscale-0 transition-all object-cover"
+              src="img/florencia-ledesma.jpg" />
             <div>
               <h4 class="text-white text-sm font-bold">Florencia Ledesma</h4>
               <p class="text-xs text-gray-500" data-i18n="testimonial_1_role">CTO • Innovar.ar</p>
@@ -476,8 +548,9 @@
             impresionante."
           </p>
           <div class="flex items-center gap-4">
-            <img alt="Cliente 2" class="w-10 h-10 rounded-full grayscale hover:grayscale-0 transition-all"
-              src="images/client-2.png" />
+            <img alt="Facundo Quiroga"
+              class="w-10 h-10 rounded-full grayscale hover:grayscale-0 transition-all object-cover"
+              src="img/facundo-quiroga.jpg" />
             <div>
               <h4 class="text-white text-sm font-bold">Facundo Quiroga</h4>
               <p class="text-xs text-gray-500" data-i18n="testimonial_2_role">Fundador • DataSur</p>
@@ -491,8 +564,9 @@
             15% inmediatamente."
           </p>
           <div class="flex items-center gap-4">
-            <img alt="Cliente 3" class="w-10 h-10 rounded-full grayscale hover:grayscale-0 transition-all"
-              src="images/client-3.png" />
+            <img alt="Martín Rocchia"
+              class="w-10 h-10 rounded-full grayscale hover:grayscale-0 transition-all object-cover"
+              src="img/martin-rocchia.jpg" />
             <div>
               <h4 class="text-white text-sm font-bold">Martín Rocchia</h4>
               <p class="text-xs text-gray-500" data-i18n="testimonial_3_role">Fundador • MateTech</p>
@@ -522,7 +596,10 @@
             <p class="text-sm text-gray-500 mt-1" data-i18n="price_retainer_desc">Soporte continuo para tu producto</p>
           </div>
           <div class="mb-6 flex items-baseline">
-            <span class="text-4xl font-bold text-gray-900 dark:text-white">$3,000</span>
+            <span class="text-gray-500 mr-2" data-i18n="price_retainer_from">desde</span>
+            <span class="text-4xl font-bold text-gray-900 dark:text-white"
+              data-i18n="price_retainer_amount">$30.000</span>
+            <span class="text-gray-500 ml-1" data-i18n="price_retainer_currency">ARS</span>
             <span class="text-gray-500 ml-2" data-i18n="price_retainer_period">/mes</span>
           </div>
           <a class="w-full py-3 px-6 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-medium text-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors mb-8"
@@ -559,8 +636,10 @@
             <p class="text-sm text-gray-500 mt-1" data-i18n="price_project_desc">Diseño y desarrollo desde cero</p>
           </div>
           <div class="mb-6 flex items-baseline">
-            <span class="text-4xl font-bold text-gray-900 dark:text-white">$8,500</span>
-            <span class="text-gray-500 ml-2" data-i18n="price_project_period">desde</span>
+            <span class="text-gray-500 mr-2" data-i18n="price_project_period">desde</span>
+            <span class="text-4xl font-bold text-gray-900 dark:text-white"
+              data-i18n="price_project_amount">$70.000</span>
+            <span class="text-gray-500 ml-1" data-i18n="price_project_currency">ARS</span>
           </div>
           <a class="w-full py-3 px-6 rounded-full bg-primary text-black font-bold text-center hover:bg-opacity-90 transition-colors mb-8 shadow-lg shadow-primary/25"
             href="#">
@@ -677,6 +756,58 @@
       </details>
     </div>
   </section>
+
+  <!-- About Me Section -->
+  <section class="py-24 px-6 relative overflow-hidden" id="about">
+    <div class="max-w-4xl mx-auto">
+      <div class="relative bg-gray-900 border border-gray-800 rounded-3xl p-8 md:p-12 overflow-hidden shadow-2xl">
+        <!-- Background decoration -->
+        <div
+          class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none">
+        </div>
+        <div
+          class="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -ml-32 -mb-32 pointer-events-none">
+        </div>
+
+        <div class="relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+          <!-- Image Placeholder (Caricature) -->
+          <div class="shrink-0 relative">
+            <div
+              class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-gray-700 shadow-2xl relative z-10 bg-gray-800 flex items-center justify-center">
+              <img src="img/andres-sebastian.jpg" alt="Andrés Sebastián" class="w-full h-full object-cover">
+            </div>
+            <!-- Decorative circle behind -->
+            <div class="absolute inset-0 bg-primary/20 blur-xl rounded-full scale-110 -z-10 animate-pulse"></div>
+          </div>
+
+          <!-- Content -->
+          <div class="text-center md:text-left">
+            <h2 class="text-3xl font-bold text-white mb-4 flex items-center justify-center md:justify-start gap-3">
+              <span data-i18n="about_title">Sobre mí</span>
+              <span class="text-primary material-icons-outlined">waving_hand</span>
+            </h2>
+            <h3 class="text-xl font-bold text-gray-200 mb-2" data-i18n="about_name">Andrés Sebastián</h3>
+            <p class="text-gray-400 text-lg leading-relaxed mb-6" data-i18n="about_desc">
+              Soy un diseñador y desarrollador apasionado por crear experiencias digitales que impactan.
+              Combino la creatividad del diseño con la precisión del código para construir productos que no solo se ven
+              bien, sino que realmente funcionen.
+              Mi objetivo es ayudar a startups y visionarios a transformar sus ideas en realidad.
+            </p>
+            <div class="flex flex-wrap justify-center md:justify-start gap-3">
+              <span
+                class="px-3 py-1 rounded-full bg-surface-light dark:bg-black border border-border-light dark:border-border-dark text-xs font-medium text-gray-400">UI/UX
+                Design</span>
+              <span
+                class="px-3 py-1 rounded-full bg-surface-light dark:bg-black border border-border-light dark:border-border-dark text-xs font-medium text-gray-400">Frontend
+                Dev</span>
+              <span
+                class="px-3 py-1 rounded-full bg-surface-light dark:bg-black border border-border-light dark:border-border-dark text-xs font-medium text-gray-400">Branding</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="py-24 px-6 text-center">
     <h2 class="text-3xl font-bold text-gray-900 md:text-5xl dark:text-white mb-8" data-i18n="cta_email_title">Empezá hoy
     </h2>
@@ -690,12 +821,17 @@
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
       <div class="mb-8 md:mb-0">
         <div class="flex items-center gap-2 mb-4">
-          <span class="w-5 h-5 bg-primary rounded-full block"></span>
-          <span class="text-xl font-bold text-gray-900 dark:text-white">planet.ar</span>
+          <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+          </span>
+          <span class="logo-text text-xl font-bold text-gray-900 dark:text-white"
+            style="font-family: 'Exo 2', sans-serif; font-weight: 900; font-style: italic;"><span
+              class="logo-default">planetar</span><span class="logo-hover">plạnetạr</span></span>
         </div>
         <p class="text-xs text-gray-500 max-w-xs" data-i18n="footer_rights">
           Ejecución fluida de diseño a código para startups y visionarios.
-          <br />© Copyright 2024. Todos los derechos reservados.
+          <br />© Copyright 2026. Todos los derechos reservados.
         </p>
       </div>
       <div class="flex gap-16 text-sm">
