@@ -207,4 +207,95 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialize
     setLanguage(currentLang);
 
+    // Contact Modal Logic
+    const contactBtn = document.getElementById('contact-btn');
+    const contactModal = document.getElementById('contact-modal');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const modalBackdrop = document.getElementById('modal-backdrop');
+    const modalPanel = document.getElementById('modal-panel');
+    const contactForm = document.getElementById('contact-form');
+
+    function openModal() {
+        contactModal.classList.remove('hidden');
+        // Small timeout to allow display:block to apply before transition
+        setTimeout(() => {
+            modalBackdrop.classList.remove('opacity-0');
+            modalPanel.classList.remove('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
+            modalPanel.classList.add('opacity-100', 'translate-y-0', 'sm:scale-100');
+        }, 10);
+    }
+
+    function closeModal() {
+        modalBackdrop.classList.add('opacity-0');
+        modalPanel.classList.remove('opacity-100', 'translate-y-0', 'sm:scale-100');
+        modalPanel.classList.add('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
+
+        // Wait for transition to finish before hiding
+        setTimeout(() => {
+            contactModal.classList.add('hidden');
+        }, 300);
+    }
+
+    if (contactBtn) {
+        contactBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
+    }
+
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', closeModal);
+    }
+
+    if (modalBackdrop) {
+        modalBackdrop.addEventListener('click', closeModal);
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !contactModal.classList.contains('hidden')) {
+            closeModal();
+        }
+    });
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerText;
+
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Enviando...';
+
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('/api/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                if (response.ok) {
+                    alert('¡Gracias por tu mensaje! Te responderé a la brevedad.');
+                    contactForm.reset();
+                    closeModal();
+                } else {
+                    const error = await response.json();
+                    alert('Hubo un error al enviar el mensaje: ' + (error.error || 'Intentalo de nuevo.'));
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Hubo un error de conexión. Por favor, intentalo de nuevo más tarde.');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerText = originalText;
+            }
+        });
+    }
+
 });

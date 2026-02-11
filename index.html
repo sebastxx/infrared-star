@@ -811,11 +811,11 @@
   <section class="py-24 px-6 text-center">
     <h2 class="text-3xl font-bold text-gray-900 md:text-5xl dark:text-white mb-8" data-i18n="cta_email_title">Empezá hoy
     </h2>
-    <a class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-black transition-all bg-primary rounded-full hover:bg-opacity-90 hover:scale-105 shadow-[0_0_20px_rgba(206,240,60,0.4)]"
-      href="mailto:hello@example.com">
+    <button id="contact-btn"
+      class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-black transition-all bg-primary rounded-full hover:bg-opacity-90 hover:scale-105 shadow-[0_0_20px_rgba(206,240,60,0.4)]">
       <span class="material-icons-outlined mr-2">email</span>
       <span data-i18n="cta_email_text">Mandame un mail</span>
-    </a>
+    </button>
   </section>
   <footer class="py-12 px-6 border-t border-border-light dark:border-border-dark bg-surface-light dark:bg-black">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
@@ -849,6 +849,106 @@
       </div>
     </div>
   </footer>
+  <!-- Contact Modal -->
+  <div id="contact-modal" class="fixed inset-0 z-[100] hidden" aria-labelledby="modal-title" role="dialog"
+    aria-modal="true">
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity opacity-0" id="modal-backdrop"></div>
+
+    <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        <!-- Modal panel -->
+        <div
+          class="relative transform overflow-hidden rounded-2xl bg-surface-light dark:bg-surface-dark text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+          id="modal-panel">
+
+          <!-- Close button -->
+          <div class="absolute right-4 top-4 z-10">
+            <button type="button" id="close-modal-btn"
+              class="rounded-md bg-transparent text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+              <span class="sr-only">Cerrar</span>
+              <span class="material-icons-outlined">close</span>
+            </button>
+          </div>
+
+          <div class="px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+            <div class="sm:flex sm:items-start">
+              <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
+                <h3 class="text-2xl font-bold leading-6 text-gray-900 dark:text-white mb-2" id="modal-title">Hablemos de
+                  tu proyecto</h3>
+                <div class="mt-2">
+                  <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">Completá el formulario y te respondo en menos
+                    de 24hs.</p>
+
+                  <form id="contact-form" class="space-y-4">
+                    <div>
+                      <label for="name"
+                        class="block text-sm font-medium leading-6 text-gray-900 dark:text-white text-left">Nombre</label>
+                      <div class="mt-1">
+                        <input type="text" name="name" id="name" required
+                          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-black/50 dark:text-white dark:ring-gray-700">
+                      </div>
+                    </div>
+
+                    <div>
+                      <label for="email"
+                        class="block text-sm font-medium leading-6 text-gray-900 dark:text-white text-left">Correo
+                        electrónico</label>
+                      <div class="mt-1">
+                        <input type="email" name="email" id="email" required
+                          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-black/50 dark:text-white dark:ring-gray-700">
+                      </div>
+                    </div>
+
+                    <div>
+                      <label for="phone"
+                        class="block text-sm font-medium leading-6 text-gray-900 dark:text-white text-left">Teléfono</label>
+                      <div class="mt-1">
+                        <input type="tel" name="phone" id="phone"
+                          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-black/50 dark:text-white dark:ring-gray-700">
+                      </div>
+                    </div>
+
+                    <div>
+                      <label for="source"
+                        class="block text-sm font-medium leading-6 text-gray-900 dark:text-white text-left">¿Dónde me
+                        conociste?</label>
+                      <div class="mt-1">
+                        <select id="source" name="source"
+                          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-black/50 dark:text-white dark:ring-gray-700">
+                          <option>Instagram</option>
+                          <option>LinkedIn</option>
+                          <option>Recomendado</option>
+                          <option>Por un amigo</option>
+                          <option>Otros</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div>
+                      <label for="message"
+                        class="block text-sm font-medium leading-6 text-gray-900 dark:text-white text-left">Consulta</label>
+                      <div class="mt-1">
+                        <textarea id="message" name="message" rows="3" required
+                          class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-black/50 dark:text-white dark:ring-gray-700"></textarea>
+                      </div>
+                    </div>
+
+                    <div class="mt-6 flex items-center justify-end gap-x-4">
+                      <button type="submit"
+                        class="w-full rounded-full bg-primary px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-primary/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors">Enviar
+                        consulta</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
 </body>
 
