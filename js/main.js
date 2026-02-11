@@ -154,38 +154,40 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
-    // Theme Switcher Logic
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    if (themeToggleBtn) {
-        const themeIcon = themeToggleBtn.querySelector('span');
-        const htmlElement = document.documentElement;
+    // Theme Switcher Logic (desktop + mobile)
+    const themeToggleBtns = document.querySelectorAll('#theme-toggle, #theme-toggle-mobile');
+    const allThemeIcons = Array.from(themeToggleBtns).map(btn => btn.querySelector('span')).filter(Boolean);
+    const htmlElement = document.documentElement;
 
-        // Check for saved user preference, if any, on load of the website
+    if (themeToggleBtns.length > 0) {
         const savedTheme = localStorage.getItem('theme');
         const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
-            htmlElement.classList.add('dark');
-            themeIcon.textContent = 'dark_mode'; // Moon icon
-            themeIcon.classList.add('rotate-180');
-        } else {
-            htmlElement.classList.remove('dark');
-            themeIcon.textContent = 'light_mode'; // Sun icon
-            themeIcon.classList.remove('rotate-180');
+        function syncThemeIcons(isDark) {
+            allThemeIcons.forEach(icon => {
+                icon.textContent = isDark ? 'dark_mode' : 'light_mode';
+                if (isDark) {
+                    icon.classList.add('rotate-180');
+                } else {
+                    icon.classList.remove('rotate-180');
+                }
+            });
         }
 
-        themeToggleBtn.addEventListener('click', () => {
-            if (htmlElement.classList.contains('dark')) {
-                htmlElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-                themeIcon.textContent = 'light_mode';
-                themeIcon.classList.remove('rotate-180');
-            } else {
-                htmlElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-                themeIcon.textContent = 'dark_mode';
-                themeIcon.classList.add('rotate-180');
-            }
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            htmlElement.classList.add('dark');
+            syncThemeIcons(true);
+        } else {
+            htmlElement.classList.remove('dark');
+            syncThemeIcons(false);
+        }
+
+        themeToggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const isDark = htmlElement.classList.toggle('dark');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                syncThemeIcons(isDark);
+            });
         });
     }
 
@@ -221,20 +223,23 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function renderLanguageSwitcher() {
-        const container = document.getElementById('language-switcher');
-        if (!container) return;
+        const containers = [
+            document.getElementById('language-switcher'),
+            document.getElementById('language-switcher-mobile')
+        ].filter(Boolean);
 
-        container.innerHTML = '';
-
-        availableLanguages.forEach(lang => {
-            if (lang !== currentLang) {
-                const button = document.createElement('button');
-                button.className = 'focus:outline-none';
-                button.innerHTML = flags[lang];
-                button.setAttribute('title', `Switch to ${lang.toUpperCase()}`);
-                button.onclick = () => setLanguage(lang);
-                container.appendChild(button);
-            }
+        containers.forEach(container => {
+            container.innerHTML = '';
+            availableLanguages.forEach(lang => {
+                if (lang !== currentLang) {
+                    const button = document.createElement('button');
+                    button.className = 'focus:outline-none';
+                    button.innerHTML = flags[lang];
+                    button.setAttribute('title', `Switch to ${lang.toUpperCase()}`);
+                    button.onclick = () => setLanguage(lang);
+                    container.appendChild(button);
+                }
+            });
         });
     }
 
@@ -333,6 +338,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 submitBtn.disabled = false;
                 submitBtn.innerText = originalText;
             }
+        });
+    }
+
+
+    // Mobile Menu Toggle
+    const menuToggleBtn = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
+    const navbarSticky = document.getElementById('navbar-sticky');
+
+    if (menuToggleBtn && navbarSticky) {
+        menuToggleBtn.addEventListener('click', () => {
+            const isExpanded = menuToggleBtn.getAttribute('aria-expanded') === 'true';
+            menuToggleBtn.setAttribute('aria-expanded', !isExpanded);
+            navbarSticky.classList.toggle('hidden');
         });
     }
 
