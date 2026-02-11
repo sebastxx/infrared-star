@@ -272,12 +272,12 @@ document.addEventListener('DOMContentLoaded', function () {
             const data = Object.fromEntries(formData.entries());
 
             try {
-                const response = await fetch('/api/send-email', {
+                const response = await fetch(contactForm.action, {
                     method: 'POST',
+                    body: formData,
                     headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data),
+                        'Accept': 'application/json'
+                    }
                 });
 
                 if (response.ok) {
@@ -285,8 +285,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     contactForm.reset();
                     closeModal();
                 } else {
-                    const error = await response.json();
-                    alert('Hubo un error al enviar el mensaje: ' + (error.error || 'Intentalo de nuevo.'));
+                    const data = await response.json();
+                    if (Object.hasOwn(data, 'errors')) {
+                        alert(data["errors"].map(error => error["message"]).join(", "));
+                    } else {
+                        alert('Hubo un error al enviar el mensaje. Intentalo de nuevo.');
+                    }
                 }
             } catch (error) {
                 console.error('Error:', error);
