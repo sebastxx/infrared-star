@@ -133,6 +133,11 @@ const translations = {
         "en": "Read case study",
         "pt": "Leia o estudo de caso"
     },
+    "work_card_cta_logofolio": {
+        "es": "Ver Colección",
+        "en": "View Collection",
+        "pt": "Ver Coleção"
+    },
 
     // New Project Cards
     "project_logofolio_badge": { "es": "Branding", "en": "Branding", "pt": "Branding" },
@@ -301,6 +306,43 @@ const translations = {
     "price_retainer_feat_3": { "es": "Pausa o cancela cuando quieras", "en": "Pause or cancel anytime", "pt": "Pause ou cancele quando quiser" },
     "price_retainer_feat_4": { "es": "Integración con Slack", "en": "Slack integration", "pt": "Integração com Slack" },
 
+    // Logofolio Page
+    "logofolio_hero_badge": { "es": "Branding & Identidad", "en": "Branding & Identity", "pt": "Branding & Identidade" },
+    "logofolio_hero_title": { "es": "Logofolio", "en": "Logofolio", "pt": "Logofólio" },
+    "logofolio_hero_desc": {
+        "es": "Una colección curada de marcas que cuentan historias. Desde la conceptualización hasta la aplicación en el mundo real.",
+        "en": "A curated collection of brands that tell stories. From conceptualization to real-world application.",
+        "pt": "Uma coleção curada de marcas que contam histórias. Da conceptualização à aplicação no mundo real."
+    },
+
+    // Logofolio Items
+    "folio_rohayhu_cat": { "es": "Tejido & Artesanía", "en": "Weaving & Crafts", "pt": "Tecelagem & Artesanato" },
+    "folio_rohayhu_desc": { "es": "Una marca que recupera técnicas ancestrales de tejido paraguayo, fusionándolas con diseños contemporáneos. La identidad visual busca transmitir calidez, tradición y el tacto orgánico de las fibras naturales.", "en": "A brand that recovers ancestral Paraguayan weaving techniques, fusing them with contemporary designs. The visual identity seeks to convey warmth, tradition, and the organic touch of natural fibers.", "pt": "Uma marca que recupera técnicas ancestrais de tecelagem paraguaia, fundindo-as com designs contemporâneos. A identidade visual busca transmitir calor, tradição e o toque orgânico das fibras naturais." },
+
+    "folio_lacazuela_cat": { "es": "Gastronomía Tradicional", "en": "Traditional Gastronomy", "pt": "Gastronomia Tradicional" },
+    "folio_lacazuela_desc": { "es": "Restaurante familiar especializado en guisos y platos de cuchara. El branding evoca el calor de hogar, la cocina a fuego lento y los sabores de la abuela, con una paleta cálida y tipografía rústica.", "en": "Family restaurant specializing in stews and spoon dishes. The branding evokes the warmth of home, slow cooking, and grandmother's flavors, with a warm palette and rustic typography.", "pt": "Restaurante familiar especializado em ensopados e pratos de colher. O branding evoca o calor do lar, o cozimento lento e os sabores da vovó, com uma paleta quente e tipografia rústica." },
+
+    "folio_cazuelagourmet_cat": { "es": "Alta Cocina", "en": "Haute Cuisine", "pt": "Alta Cozinha" },
+    "folio_cazuelagourmet_desc": { "es": "Una reinvención sofisticada de la cocina tradicional. La identidad visual utiliza dorados y negros para comunicar exclusividad, elegancia y una experiencia culinaria premium.", "en": "A sophisticated reinvention of traditional cuisine. The visual identity uses gold and black to communicate exclusivity, elegance, and a premium culinary experience.", "pt": "Uma reinvenção sofisticada da cozinha tradicional. A identidade visual usa dourados e pretos para comunicar exclusividade, elegância e uma experiência culinária premium." },
+
+    "folio_laslilas_cat": { "es": "Indumentaria Femenina", "en": "Women's Apparel", "pt": "Vestuário Feminino" },
+    "folio_laslilas_desc": { "es": "Boutique de ropa femenina con un enfoque romántico y delicado. El uso de tonos lilas suaves y tipografías finas refleja la femineidad moderna y la elegancia sutil de sus colecciones.", "en": "Women's clothing boutique with a romantic and delicate focus. The use of soft lilac tones and fine typography reflects modern femininity and the subtle elegance of its collections.", "pt": "Boutique de roupas femininas com um foco romântico e delicado. O uso de tons lilás suaves e tipografia fina reflete a feminilidade moderna e a elegância sutil de suas coleções." },
+
+    "folio_sirocco_cat": { "es": "Heladería Artesanal", "en": "Artisanal Ice Cream", "pt": "Sorveteria Artesanal" },
+    "folio_sirocco_desc": { "es": "Frescura mediterránea. Inspirado en el viento Sirocco, la marca utiliza tonos turquesas y blancos para evocar aire fresco, ingredientes naturales y el placer de un buen helado artesanal.", "en": "Mediterranean freshness. Inspired by the Sirocco wind, the brand uses turquoise and white tones to evoke fresh air, natural ingredients, and the pleasure of good artisanal ice cream.", "pt": "Frescor mediterrâneo. Inspirado no vento Sirocco, a marca usa tons turquesa e branco para evocar ar fresco, ingredientes naturais e o prazer de um bom sorvete artesanal." },
+
+    "folio_margen_cat": { "es": "Librería & Editorial", "en": "Bookstore & Publishing", "pt": "Livraria & Editora" },
+    "folio_margen_desc": { "es": "Espacio cultural y librería independiente. La identidad es limpia y abierta, utilizando el celeste para simbolizar la claridad mental, la imaginación y el horizonte infinito de la lectura.", "en": "Cultural space and independent bookstore. The identity is clean and open, using sky blue to symbolize mental clarity, imagination, and the infinite horizon of reading.", "pt": "Espaço cultural e livraria independente. A identidade é limpa e aberta, usando o azul celeste para simbolizar a clareza mental, a imaginação e o horizonte infinito da leitura." },
+
+    "folio_vita_cat": { "es": "Indumentaria", "en": "Apparel", "pt": "Vestuário" },
+    "folio_vita_desc": { "es": "Moda y carácter. Una marca de indumentaria que rompe moldes con un color vino oscuro intenso, comunicando elegancia, pasión y un estilo sofisticado para quienes buscan destacar.", "en": "Fashion and character. A clothing brand that breaks molds with an intense dark wine color, communicating elegance, passion, and a sophisticated style for those seeking to stand out.", "pt": "Moda e caráter. Uma marca de roupas que quebra moldes com uma cor vinho escuro intenso, comunicando elegância, paixão e um estilo sofisticado para quem busca se destacar." },
+
+    "folio_tirolesa_cat": { "es": "Nutrición & Energía", "en": "Nutrition & Energy", "pt": "Nutrição & Energia" },
+    "folio_tirolesa_desc": { "es": "Aventura y resistencia. Una marca de suplementos inspirada en el desafío de la montaña. El azul profundo conecta con la inmensidad del cielo y la solidez de la roca, ofreciendo energía para alcanzar nuevas cimas.", "en": "Adventure and endurance. A supplement brand inspired by the mountain challenge. Deep blue connects with the immensity of the sky and the solidity of the rock, offering energy to reach new peaks.", "pt": "Aventura e resistência. Uma marca de suplementos inspirada no desafio da montanha. O azul profundo se conecta com a imensidão do céu e a solidez da rocha, oferecendo energia para alcançar novos picos." },
+
+    "folio_afini_cat": { "es": "Bienestar & Holística", "en": "Wellness & Holistic", "pt": "Bem-estar & Holística" },
+    "folio_afini_desc": { "es": "Un centro integral de bienestar, yoga y atención psicológica. La identidad visual respira calma y equilibrio, invitando a las personas a un viaje de autoconocimiento y sanación interior.", "en": "A comprehensive center for wellness, yoga, and psychological care. The visual identity breathes calm and balance, inviting people to a journey of self-knowledge and inner healing.", "pt": "Um centro integral de bem-estar, ioga e atendimento psicológico. A identidade visual respira calma e equilíbrio, convidando as pessoas para uma jornada de autoconhecimento e cura interior." },
+
     "price_project_tag": { "es": "Más Popular", "en": "Most Popular", "pt": "Mais Popular" },
     "price_project_title": { "es": "Proyecto Completo", "en": "Full Project", "pt": "Projeto Completo" },
     "price_project_desc": { "es": "Diseño y desarrollo desde cero", "en": "Design and development from scratch", "pt": "Design e desenvolvimento do zero" },
@@ -346,6 +388,39 @@ const translations = {
     "cs_results_text_3": { "es": "Adopción del 100% en 2 semanas", "en": "100% adoption in 2 weeks", "pt": "100% de adoção em 2 semanas" },
 
     "cs_gallery_caption": { "es": "Vista detallada del panel de control principal y vistas móviles.", "en": "Detailed view of the main dashboard and mobile views.", "pt": "Visão detalhada do painel de controle principal e visualizações móveis." },
+
+    // Lumina Case Study
+    "lumina_title": { "es": "Lumina App", "en": "Lumina App", "pt": "Lumina App" },
+    "lumina_client_val": { "es": "Lumina Inc.", "en": "Lumina Inc.", "pt": "Lumina Inc." },
+    "lumina_role_val": { "es": "Mobile Development • UI/UX", "en": "Mobile Development • UI/UX", "pt": "Desenv. Mobile • UI/UX" },
+    "lumina_date_val": { "es": "Invierno 2025", "en": "Winter 2025", "pt": "Inverno 2025" },
+
+    "lumina_challenge_text_1": {
+        "es": "Buscar terapia suele ser un proceso cargado de ansiedad e incertidumbre. La mayoría de las plataformas actuales funcionan como simples directorios telefónicos: listas interminables de nombres y títulos que no transmiten confianza ni conexión humana real.",
+        "en": "Seeking therapy is often a process fraught with anxiety and uncertainty. Most current platforms function as simple phone directories: endless lists of names and titles that fail to convey trust or real human connection.",
+        "pt": "Buscar terapia costuma ser um processo carregado de ansiedade e incerteza. A maioria das plataformas atuais funciona como simples listas telefônicas: listas intermináveis de nomes e títulos que não transmitem confiança nem conexão humana real."
+    },
+    "lumina_challenge_text_2": {
+        "es": "Los usuarios se enfrentan a la paradoja de la elección sin tener información cualitativa suficiente, lo que genera parálisis. El desafío era rediseñar este viaje desde la vulnerabilidad, transformando una búsqueda fría y técnica en una experiencia cálida, segura y empática desde el inicio.",
+        "en": "Users face the paradox of choice without sufficient qualitative information, leading to paralysis. The challenge was to redesign this journey from vulnerability, transforming a cold and technical search into a warm, safe, and empathetic experience from the start.",
+        "pt": "Os usuários enfrentam o paradoxo da escolha sem ter informações qualitativas suficientes, o que gera paralisia. O desafio era redesenhar essa jornada a partir da vulnerabilidade, transformando uma busca fria e técnica em uma experiência calorosa, segura e empática desde o início."
+    },
+
+    "lumina_solution_text_1": {
+        "es": "Lumina transforma radicalmente esta experiencia priorizando la conexión humana. Diseñamos un sistema de onboarding conversacional que va más allá de los síntomas, explorando valores, estilo de comunicación y preferencias culturales para realizar un \"match\" profundo y significativo.",
+        "en": "Lumina radically transforms this experience by prioritizing human connection. We designed a conversational onboarding system that goes beyond symptoms, exploring values, communication style, and cultural preferences to make a deep and meaningful \"match\".",
+        "pt": "Lumina transforma radicalmente essa experiência priorizando a conexão humana. Projetamos um sistema de onboarding conversacional que vai além dos sintomas, explorando valores, estilo de comunicação e preferências culturais para realizar um \"match\" profundo e significativo."
+    },
+    "lumina_solution_text_2": {
+        "es": "A través de filtros por afinidad y transparencia total en precios, eliminamos la fricción administrativa. La interfaz, visualmente calmada y libre de distracciones, guía al usuario paso a paso, garantizando un espacio seguro donde encontrar al profesional ideal se siente como el primer paso de la terapia misma.",
+        "en": "Through affinity filters and total price transparency, we eliminate administrative friction. The visually calm and distraction-free interface guides the user step-by-step, ensuring a safe space where finding the ideal professional feels like the very first step of therapy itself.",
+        "pt": "Através de filtros por afinidade e transparência total nos preços, eliminamos a fricção administrativa. A interface, visualmente calma e livre de distrações, guia o usuário passo a passo, garantindo um espaço seguro onde encontrar o profissional ideal parece o primeiro passo da própria terapia."
+    },
+
+    "lumina_stat_1_label": { "es": "App Store Rating", "en": "App Store Rating", "pt": "Avaliação App Store" },
+    "lumina_stat_2_label": { "es": "Usuarios Activos", "en": "Active Users", "pt": "Usuários Ativos" },
+    "lumina_stat_3_label": { "es": "Churn Rate", "en": "Churn Rate", "pt": "Taxa de Churn" },
+    "lumina_gallery_caption": { "es": "Flujo de usuario y pantallas principales de la aplicación Lumina.", "en": "User flow and main screens of the Lumina application.", "pt": "Fluxo do usuário e telas principais do aplicativo Lumina." },
 
     "faq_title": { "es": "Preguntas frecuentes", "en": "Frequently asked questions", "pt": "Perguntas frequentes" },
 

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Logofolio - Colección de Identidad</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="js/tailwind.config.js"></script>
+    <script src="js/translations.js"></script>
+    <style>
+        .carousel-track {
+            scrollbar-width: none;
+        }
+
+        .carousel-track::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 antialiased">
+
+    <!-- Nav -->
+    <nav
+        class="fixed w-full z-50 top-0 start-0 backdrop-blur-md bg-background-light/80 dark:bg-background-dark/80 border-b border-border-light dark:border-border-dark">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-6 py-4 relative">
+            <a class="flex items-center space-x-2 rtl:space-x-reverse" href="index.html">
+                <span
+                    class="logo-text text-xl font-bold whitespace-nowrap text-gray-900 dark:text-white flex items-center gap-2"
+                    style="font-family: 'Exo 2', sans-serif; font-weight: 900; font-style: italic;">
+                    <span class="relative flex h-4 w-4">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-4 w-4 bg-primary"></span>
+                    </span>
+                    <span class="logo-default">planetar</span><span class="logo-hover">plạnetạr</span>
+                </span>
+            </a>
+            <div class="flex items-center md:order-2 gap-3 rtl:space-x-reverse">
+                <button id="theme-toggle"
+                    class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                    aria-label="Toggle Dark Mode">
+                    <span
+                        class="material-icons-outlined text-gray-600 dark:text-gray-300 transform transition-transform duration-500 rotate-0 dark:rotate-180">light_mode</span>
+                </button>
+                <div id="language-switcher" class="flex items-center space-x-2">
+                    <!-- Flags will be injected by JS -->
+                </div>
+                <a class="text-sm font-medium hover:text-primary transition-colors px-4 hidden md:block"
+                    href="index.html#contact" data-i18n="nav_contact" style="display:none;">Ingresá</a>
+                <button
+                    class="flex items-center justify-center h-10 text-black bg-primary hover:bg-opacity-90 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-full text-sm px-6 transition-transform hover:scale-105"
+                    type="button" data-i18n="nav_contact" onclick="window.location.href='index.html#contact'">
+                    Hablemos
+                </button>
+                <button aria-controls="navbar-sticky" aria-expanded="false"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    data-collapse-toggle="navbar-sticky" type="button">
+                    <span class="sr-only">Abrir menú principal</span>
+                    <svg aria-hidden="true" class="w-5 h-5" fill="none" viewBox="0 0 17 14"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1h15M1 7h15M1 13h15" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 md:absolute md:left-1/2 md:-translate-x-1/2"
+                id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+                    <li>
+                        <a class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 dark:text-white dark:hover:text-primary dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 transition-colors"
+                            href="index.html" data-i18n="nav_home">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 dark:text-white dark:hover:text-primary dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 transition-colors"
+                            href="index.html#work" data-i18n="nav_projects">Proyectos</a>
+                    </li>
+                    <li>
+                        <a class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 dark:text-white dark:hover:text-primary dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 transition-colors"
+                            href="index.html#services" data-i18n="nav_services">Servicios</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Back Link -->
+            <a href="index.html#work"
+                class="inline-flex items-center text-sm text-gray-500 hover:text-primary mb-8 mt-4 transition-colors">
+                <span class="material-icons-outlined mr-2">arrow_back</span>
+                <span data-i18n="cs_nav_back">Volver al inicio</span>
+            </a>
+            <!-- Hero -->
+            <div class="text-center mb-20">
+                <span data-i18n="logofolio_hero_badge"
+                    class="inline-block px-3 py-1 mb-4 text-xs font-medium tracking-wide text-violet-500 uppercase border border-violet-500/20 rounded-full bg-violet-500/10">
+                    Branding & Identidad
+                </span>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 dark:text-white" data-i18n="logofolio_hero_title">
+                    Logofolio</h1>
+                <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto" data-i18n="logofolio_hero_desc">
+                    Una colección curada de marcas que cuentan historias. Desde la conceptualización hasta la aplicación
+                    en el mundo real.
+                </p>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8" id="logofolio-grid">
+                <!-- Items will be injected by JS for better management of data/modal -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-12 px-6 border-t border-border-light dark:border-border-dark bg-surface-light dark:bg-black">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div class="mb-8 md:mb-0">
+                <div class="flex items-center gap-2 mb-4">
+                    <span class="relative flex h-3 w-3">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                    </span>
+                    <span class="logo-text text-xl font-bold text-gray-900 dark:text-white"
+                        style="font-family: 'Exo 2', sans-serif; font-weight: 900; font-style: italic;"><span
+                            class="logo-default">planetar</span><span class="logo-hover">plạnetạr</span></span>
+                </div>
+                <p class="text-xs text-gray-500 max-w-xs" data-i18n="footer_rights">
+                    Ejecución fluida de diseño a código para startups y visionarios.
+                    <br />© Copyright 2026. Todos los derechos reservados.
+                </p>
+            </div>
+            <div class="flex gap-16 text-sm">
+                <div class="flex flex-col gap-3">
+                    <span class="font-bold text-gray-900 dark:text-white">Redes</span>
+                    <a class="text-gray-500 hover:text-primary transition-colors" href="#">Twitter</a>
+                    <a class="text-gray-500 hover:text-primary transition-colors" href="#">LinkedIn</a>
+                    <a class="text-gray-500 hover:text-primary transition-colors" href="#">GitHub</a>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <span class="font-bold text-gray-900 dark:text-white">Legal</span>
+                    <a class="text-gray-500 hover:text-primary transition-colors" href="#">Términos</a>
+                    <a class="text-gray-500 hover:text-primary transition-colors" href="#">Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="fixed inset-0 z-[100] hidden" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
+        <!-- Backdrop -->
+        <div class="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity opacity-0" id="modal-backdrop"></div>
+
+        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <!-- Modal Panel -->
+                <div class="relative transform overflow-hidden rounded-3xl bg-surface-light dark:bg-surface-dark text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-5xl border border-gray-200 dark:border-gray-700 opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    id="modal-panel">
+
+                    <button onclick="closeModal()"
+                        class="absolute top-4 right-4 z-20 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors shadow-lg">
+                        <span class="material-icons-outlined">close</span>
+                    </button>
+
+                    <div class="flex flex-col lg:flex-row h-[80vh] lg:h-[600px]">
+                        <!-- Left: Large Carousel -->
+                        <div class="w-full lg:w-2/3 bg-black relative group h-1/2 lg:h-full">
+                            <div class="flex w-full h-full overflow-x-auto snap-x snap-mandatory scroll-smooth carousel-track"
+                                id="modal-carousel">
+                                <!-- Images injected here -->
+                            </div>
+                            <!-- Controls -->
+                            <button onclick="scrollModalCarousel(-1)"
+                                class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md text-white p-3 rounded-full hover:bg-white/20 transition-all">
+                                <span class="material-icons-outlined">chevron_left</span>
+                            </button>
+                            <button onclick="scrollModalCarousel(1)"
+                                class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md text-white p-3 rounded-full hover:bg-white/20 transition-all">
+                                <span class="material-icons-outlined">chevron_right</span>
+                            </button>
+                        </div>
+
+                        <!-- Right: Details -->
+                        <div
+                            class="w-full lg:w-1/3 p-8 lg:p-10 overflow-y-auto bg-surface-light dark:bg-surface-dark flex flex-col">
+                            <span id="modal-category"
+                                class="text-xs font-bold tracking-widest text-primary uppercase mb-3"></span>
+                            <h2 id="modal-title" class="text-3xl font-bold text-gray-900 dark:text-white mb-6"></h2>
+
+                            <div
+                                class="prose dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 mb-8 flex-grow">
+                                <p id="modal-description"></p>
+                            </div>
+
+                            <div class="mt-auto pt-6 border-t border-gray-200 dark:border-gray-700">
+                                <div
+                                    class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 flex items-center justify-center">
+                                    <img id="modal-logo" src="" class="max-h-32 w-auto opacity-80" alt="Logo">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Data populated with new colors and extended descriptions
+        const folioData = [
+            {
+                id: 'rohayhu',
+                title: 'Rohayhu',
+                category: 'Tejido & Artesanía',
+                categoryKey: 'folio_rohayhu_cat',
+                desc: 'Una marca que recupera técnicas ancestrales de tejido paraguayo, fusionándolas con diseños contemporáneos. La identidad visual busca transmitir calidez, tradición y el tacto orgánico de las fibras naturales.',
+                descKey: 'folio_rohayhu_desc',
+                images: ['rohayhu-1.png', 'rohayhu-2.png'],
+                logo: 'rohayhu.svg',
+                brandColor: '#D97706', // Orange
+                brandColorName: 'brand-orange'
+            },
+            {
+                id: 'lacazuela',
+                title: 'La Cazuela',
+                category: 'Gastronomía Tradicional',
+                categoryKey: 'folio_lacazuela_cat',
+                desc: 'Restaurante familiar especializado en guisos y platos de cuchara. El branding evoca el calor de hogar, la cocina a fuego lento y los sabores de la abuela, con una paleta cálida y tipografía rústica.',
+                descKey: 'folio_lacazuela_desc',
+                images: ['lacazuela-1.png', 'lacazuela-2.png'],
+                logo: 'lacazuela.svg',
+                brandColor: '#ef4444', // Red
+                brandColorName: 'brand-red'
+            },
+            {
+                id: 'cazuelagourmet',
+                title: 'La Cazuela - Gourmet',
+                category: 'Alta Cocina',
+                categoryKey: 'folio_cazuelagourmet_cat',
+                desc: 'Una reinvención sofisticada de la cocina tradicional. La identidad visual utiliza dorados y negros para comunicar exclusividad, elegancia y una experiencia culinaria premium.',
+                descKey: 'folio_cazuelagourmet_desc',
+                images: ['cazuelagourmet-1.png', 'cazuelagourmet-2.png', 'cazuelagourmet-3.png'],
+                logo: 'cazuelagourmet.svg',
+                brandColor: '#EAB308', // Gold
+                brandColorName: 'brand-gold'
+            },
+            {
+                id: 'laslilas',
+                title: 'Las Lilas',
+                category: 'Indumentaria Femenina',
+                categoryKey: 'folio_laslilas_cat',
+                desc: 'Boutique de ropa femenina con un enfoque romántico y delicado. El uso de tonos lilas suaves y tipografías finas refleja la femineidad moderna y la elegancia sutil de sus colecciones.',
+                descKey: 'folio_laslilas_desc',
+                images: ['laslilas-1.png', 'laslilas-2.png'],
+                logo: 'laslilas.svg',
+                brandColor: '#E9D5FF', // Soft Lilac
+                brandColorClass: 'bg-purple-200 border-purple-300',
+                brandColorHex: '#E9D5FF'
+            },
+            // Embragues removed
+            {
+                id: 'sirocco',
+                title: 'Sirocco',
+                category: 'Heladería Artesanal',
+                categoryKey: 'folio_sirocco_cat',
+                desc: 'Frescura mediterránea. Inspirado en el viento Sirocco, la marca utiliza tonos turquesas y blancos para evocar aire fresco, ingredientes naturales y el placer de un buen helado artesanal.',
+                descKey: 'folio_sirocco_desc',
+                images: ['sirocco-1.png', 'sirocco-2.png'],
+                logo: 'sirocco.svg',
+                brandColor: '#06b6d4', // Cyan
+                brandColorName: 'brand-cyan'
+            },
+            {
+                id: 'margen',
+                title: 'Desde el Margen',
+                category: 'Librería & Editorial',
+                categoryKey: 'folio_margen_cat',
+                desc: 'Espacio cultural y librería independiente. La identidad es limpia y abierta, utilizando el celeste para simbolizar la claridad mental, la imaginación y el horizonte infinito de la lectura.',
+                descKey: 'folio_margen_desc',
+                images: ['margen-1.png', 'margen-2.png'],
+                logo: 'margen.svg',
+                brandColor: '#60A5FA', // Celeste/Sky Blue
+                brandColorName: 'brand-sky'
+            },
+            {
+                id: 'vita',
+                title: 'Vita',
+                category: 'Indumentaria',
+                categoryKey: 'folio_vita_cat',
+                desc: 'Moda y carácter. Una marca de indumentaria que rompe moldes con un color vino oscuro intenso, comunicando elegancia, pasión y un estilo sofisticado para quienes buscan destacar.',
+                descKey: 'folio_vita_desc',
+                images: ['vita-1.png', 'vita-2.png'],
+                logo: 'vita.svg',
+                brandColor: '#722F37', // Dark Wine
+                brandColorName: 'brand-wine'
+            },
+            {
+                id: 'tirolesa',
+                title: 'Suplementos Tirolesa',
+                category: 'Nutrición & Energía',
+                categoryKey: 'folio_tirolesa_cat',
+                desc: 'Aventura y resistencia. Una marca de suplementos inspirada en el desafío de la montaña. El azul profundo conecta con la inmensidad del cielo y la solidez de la roca, ofreciendo energía para alcanzar nuevas cimas.',
+                descKey: 'folio_tirolesa_desc',
+                images: ['tirolesa-1.png', 'tirolesa-2.png'],
+                logo: 'tirolesa.svg',
+                brandColor: '#2563EB', // Blue
+                brandColorName: 'brand-blue-600'
+            },
+            {
+                id: 'afini',
+                title: 'Afini',
+                category: 'Bienestar & Holística',
+                categoryKey: 'folio_afini_cat',
+                desc: 'Un centro integral de bienestar, yoga y atención psicológica. La identidad visual respira calma y equilibrio, invitando a las personas a un viaje de autoconocimiento y sanación interior.',
+                descKey: 'folio_afini_desc',
+                images: ['afini-1.png', 'afini-2.png'],
+                logo: 'afini.svg',
+                brandColor: '#0d9488', // Teal
+                brandColorName: 'brand-teal'
+            }
+        ];
+
+        // Init Grid
+        const grid = document.getElementById('logofolio-grid');
+
+        folioData.forEach(item => {
+            const article = document.createElement('article');
+            article.className = 'bg-surface-light dark:bg-surface-dark rounded-3xl overflow-hidden border border-border-light dark:border-border-dark shadow-xl flex flex-col group/card hover:shadow-2xl transition-shadow';
+
+            // Generate Thumb Carousel HTML
+            let carouselImages = '';
+            item.images.forEach(img => {
+                carouselImages += `<img src="img/logofolio/${img}" class="flex-shrink-0 w-full h-full object-cover snap-center cursor-pointer" onclick="openModal('${item.id}')">`;
+            });
+
+            // Special handling for Las Lilas branding in buttons since we need custom style matching hex
+            const brandButtonStyle = `background-color: ${item.brandColor}; border-color: ${item.brandColor}80;`;
+
+            article.innerHTML = `
+                <div class="relative items-center justify-center group aspect-[4/3] overflow-hidden bg-gray-100 dark:bg-gray-800">
+                    <div class="carousel-track flex w-full h-full overflow-x-auto snap-x snap-mandatory scroll-smooth" id="carousel-${item.id}">
+                        ${carouselImages}
+                    </div>
+                </div>
+
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="flex justify-between items-start mb-4 cursor-pointer" onclick="openModal('${item.id}')">
+                        <div>
+                            <h3 class="text-xl font-bold dark:text-white group-hover/card:text-primary transition-colors">${item.title}</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400" data-i18n="${item.categoryKey}">${item.category}</p>
+                        </div>
+                        <span class="material-icons-outlined text-gray-300 group-hover/card:text-primary">open_in_new</span>
+                    </div>
+
+                    <!-- Logo Display -->
+                    <div id="logo-bg-${item.id}" class="w-full h-48 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300 bg-white border border-gray-100 dark:border-gray-700 cursor-pointer" onclick="openModal('${item.id}')">
+                        <img src="img/logofolio/${item.logo}" class="max-w-[60%] max-h-[60%] w-auto h-auto transition-all duration-300 select-none" id="logo-img-${item.id}">
+                    </div>
+
+                    <!-- Color Toggles -->
+                    <div class="flex justify-center gap-3 mt-auto">
+                        <button onclick="setLogoBg('${item.id}', 'light')" class="w-8 h-8 rounded-full border border-gray-300 bg-white shadow-sm hover:scale-110 transition-transform" title="Fondo Claro"></button>
+                        <button onclick="setLogoBg('${item.id}', 'dark')" class="w-8 h-8 rounded-full border border-gray-600 bg-gray-900 shadow-sm hover:scale-110 transition-transform" title="Fondo Oscuro"></button>
+                        <button onclick="setLogoBg('${item.id}', 'brand', '${item.brandColor}')" class="w-8 h-8 rounded-full shadow-sm hover:scale-110 transition-transform border border-white/20" style="${brandButtonStyle}" title="Color de Marca"></button>
+                    </div>
+                </div>
+            `;
+            grid.appendChild(article);
+        });
+
+        // --- Functions ---
+
+        // Logo Color Logic
+        function setLogoBg(id, type, brandColor) {
+            const bg = document.getElementById(`logo-bg-${id}`);
+            const img = document.getElementById(`logo-img-${id}`);
+
+            if (type === 'light') {
+                bg.style.backgroundColor = '#ffffff';
+                img.style.filter = 'brightness(0) saturate(100%)'; // Reset to original color (assuming black/original is dark enough) - actually better to remove filter
+                img.style.filter = '';
+            } else if (type === 'dark') {
+                bg.style.backgroundColor = '#1f2937';
+                img.style.filter = 'brightness(0) invert(1)'; // White
+            } else if (type === 'brand') {
+                bg.style.backgroundColor = brandColor;
+                img.style.filter = 'brightness(0) invert(1)'; // White
+            }
+        }
+
+        // --- Modal Logic ---
+        const modal = document.getElementById('project-modal');
+        const modalBackdrop = document.getElementById('modal-backdrop');
+        const modalPanel = document.getElementById('modal-panel');
+        const modalTitle = document.getElementById('modal-title');
+        const modalCategory = document.getElementById('modal-category');
+        const modalDesc = document.getElementById('modal-description');
+        const modalLogo = document.getElementById('modal-logo');
+        const modalCarousel = document.getElementById('modal-carousel');
+
+        function openModal(id) {
+            const item = folioData.find(d => d.id === id);
+            if (!item) return;
+
+            // Populate text
+            modalTitle.textContent = item.title;
+
+            // Set data-i18n and handle immediate translation
+            modalCategory.setAttribute('data-i18n', item.categoryKey);
+            modalDesc.setAttribute('data-i18n', item.descKey);
+
+            // If we have translations avail, set them now based on current lang
+            // (Assumes currentLang is global from main.js)
+            const lang = window.currentLang || document.documentElement.lang || 'es';
+
+            if (typeof translations !== 'undefined' && translations[item.categoryKey] && translations[item.categoryKey][lang]) {
+                modalCategory.textContent = translations[item.categoryKey][lang];
+            } else {
+                modalCategory.textContent = item.category;
+            }
+
+            if (typeof translations !== 'undefined' && translations[item.descKey] && translations[item.descKey][lang]) {
+                modalDesc.textContent = translations[item.descKey][lang];
+            } else {
+                modalDesc.textContent = item.desc;
+            }
+
+            modalLogo.src = `img/logofolio/${item.logo}`;
+
+            // Populate Carousel
+            modalCarousel.innerHTML = '';
+            item.images.forEach(img => {
+                const imgEl = document.createElement('img');
+                imgEl.src = `img/logofolio/${img}`;
+                imgEl.className = "flex-shrink-0 w-full h-full object-contain bg-black snap-center";
+                modalCarousel.appendChild(imgEl);
+            });
+
+            // Show Modal (Animate)
+            modal.classList.remove('hidden');
+            // Small delay to allow display:block to apply before opacity transition
+            setTimeout(() => {
+                modalBackdrop.classList.remove('opacity-0');
+                modalPanel.classList.remove('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
+                modalPanel.classList.add('opacity-100', 'translate-y-0', 'sm:scale-100');
+            }, 10);
+
+            document.body.style.overflow = 'hidden'; // Lock scroll
+        }
+
+        function closeModal() {
+            modalBackdrop.classList.add('opacity-0');
+            modalPanel.classList.add('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
+            modalPanel.classList.remove('opacity-100', 'translate-y-0', 'sm:scale-100');
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = ''; // Unlock scroll
+            }, 300);
+        }
+        // Carousel Logic
+        function scrollCarousel(id, direction) {
+            const container = document.getElementById(id);
+            const scrollAmount = container.clientWidth;
+            const maxScroll = container.scrollWidth - container.clientWidth;
+
+            if (direction === 1) {
+                // Next
+                if (container.scrollLeft >= maxScroll - 5) {
+                    // Loop to start
+                    container.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                }
+            } else {
+                // Prev
+                if (container.scrollLeft <= 5) {
+                    // Loop to end
+                    container.scrollTo({ left: container.scrollWidth, behavior: 'smooth' });
+                } else {
+                    container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                }
+            }
+        }
+
+        function scrollModalCarousel(direction) {
+            const w = modalCarousel.clientWidth;
+            const maxScroll = modalCarousel.scrollWidth - modalCarousel.clientWidth;
+
+            if (direction === 1) {
+                // Next
+                if (modalCarousel.scrollLeft >= maxScroll - 5) {
+                    // Loop to start
+                    modalCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    modalCarousel.scrollBy({ left: w, behavior: 'smooth' });
+                }
+            } else {
+                // Prev
+                if (modalCarousel.scrollLeft <= 5) {
+                    // Loop to end
+                    modalCarousel.scrollTo({ left: modalCarousel.scrollWidth, behavior: 'smooth' });
+                } else {
+                    modalCarousel.scrollBy({ left: -w, behavior: 'smooth' });
+                }
+            }
+        }
+
+        // Esc key to close
+        document.addEventListener('keydown', function (event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+
+        // Click outside to close
+        modal.addEventListener('click', (e) => {
+            if (e.target === modalBackdrop || e.target.parentElement === modalBackdrop) {
+                closeModal();
+            }
+        })
+
+    </script>
+</body>
+
+</html>

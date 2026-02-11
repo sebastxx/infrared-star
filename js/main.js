@@ -154,7 +154,41 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
-    // Language Switcher Logic
+    // Theme Switcher Logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    if (themeToggleBtn) {
+        const themeIcon = themeToggleBtn.querySelector('span');
+        const htmlElement = document.documentElement;
+
+        // Check for saved user preference, if any, on load of the website
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            htmlElement.classList.add('dark');
+            themeIcon.textContent = 'dark_mode'; // Moon icon
+            themeIcon.classList.add('rotate-180');
+        } else {
+            htmlElement.classList.remove('dark');
+            themeIcon.textContent = 'light_mode'; // Sun icon
+            themeIcon.classList.remove('rotate-180');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                themeIcon.textContent = 'light_mode';
+                themeIcon.classList.remove('rotate-180');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                themeIcon.textContent = 'dark_mode';
+                themeIcon.classList.add('rotate-180');
+            }
+        });
+    }
+
     const availableLanguages = ['es', 'en', 'pt'];
     const flags = {
         'es': `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" class="w-6 h-auto shadow-sm rounded-sm transition-transform hover:scale-110 cursor-pointer" data-lang="es"><path fill="#75aadb" d="M0 0h900v600H0z"/><path fill="#fff" d="M0 200h900v200H0z"/><path fill="#f6b40e" d="M450 245c33.1 0 60 26.9 60 60s-26.9 60-60 60-60-26.9-60-60 26.9-60 60-60z"/></svg>`,

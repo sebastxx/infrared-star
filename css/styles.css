@@ -1,5 +1,30 @@
+:root {
+    /* Light Mode (Default) */
+    --bg-color: #ffffff;
+    --surface-color: #f8fafc;
+    --text-color: #111827;
+    --text-muted: #4b5563;
+    --border-color: #e2e8f0;
+}
+
+.dark {
+    /* Dark Mode (Glaido inspired) */
+    --bg-color: #0e0e0e;
+    --surface-color: #1c1c1c;
+    --text-color: #f0f0f0;
+    --text-muted: #a0a0a0;
+    --border-color: #333333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .logo-text .logo-hover {

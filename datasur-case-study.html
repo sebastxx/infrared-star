@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Case Study: Fintech Dashboard - plạnetȧr</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script src="js/tailwind.config.js"></script>
+    <script src="js/translations.js"></script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 antialiased selection:bg-primary selection:text-black">
+    <nav
+        class="fixed w-full z-50 top-0 start-0 backdrop-blur-md bg-background-light/80 dark:bg-background-dark/80 border-b border-border-light dark:border-border-dark">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-6 py-4 relative">
+            <a class="flex items-center space-x-2 rtl:space-x-reverse" href="index.html">
+                <span
+                    class="logo-text text-xl font-bold whitespace-nowrap text-gray-900 dark:text-white flex items-center gap-2"
+                    style="font-family: 'Exo 2', sans-serif; font-weight: 900; font-style: italic;">
+                    <span class="relative flex h-4 w-4">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-4 w-4 bg-primary"></span>
+                    </span>
+                    <span class="logo-default">planetar</span><span class="logo-hover">plạnetạr</span>
+                </span>
+            </a>
+            <div class="flex items-center md:order-2 gap-3 rtl:space-x-reverse">
+                <button id="theme-toggle"
+                    class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+                    aria-label="Toggle Dark Mode">
+                    <span
+                        class="material-icons-outlined text-gray-600 dark:text-gray-300 transform transition-transform duration-500 rotate-0 dark:rotate-180">light_mode</span>
+                </button>
+                <div id="language-switcher" class="flex items-center space-x-2">
+                    <!-- Flags will be injected by JS -->
+                </div>
+                <a class="text-sm font-medium hover:text-primary transition-colors px-4 hidden md:block"
+                    href="index.html#contact" data-i18n="nav_contact" style="display:none;">Ingresá</a>
+                <button
+                    class="flex items-center justify-center h-10 text-black bg-primary hover:bg-opacity-90 focus:ring-4 focus:outline-none focus:ring-lime-300 font-medium rounded-full text-sm px-6 transition-transform hover:scale-105"
+                    type="button" data-i18n="nav_contact" onclick="window.location.href='index.html#contact'">
+                    Hablemos
+                </button>
+                <button aria-controls="navbar-sticky" aria-expanded="false"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    data-collapse-toggle="navbar-sticky" type="button">
+                    <span class="sr-only">Abrir menú principal</span>
+                    <svg aria-hidden="true" class="w-5 h-5" fill="none" viewBox="0 0 17 14"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1h15M1 7h15M1 13h15" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 md:absolute md:left-1/2 md:-translate-x-1/2"
+                id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+                    <li>
+                        <a class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 dark:text-white dark:hover:text-primary dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 transition-colors"
+                            href="index.html" data-i18n="nav_home">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 dark:text-white dark:hover:text-primary dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 transition-colors"
+                            href="index.html#work" data-i18n="nav_projects">Proyectos</a>
+                    </li>
+                    <li>
+                        <a class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0 dark:text-white dark:hover:text-primary dark:hover:bg-gray-700 md:dark:hover:bg-transparent dark:border-gray-700 transition-colors"
+                            href="index.html#services" data-i18n="nav_services">Servicios</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20">
+        <article class="max-w-4xl mx-auto px-6">
+
+            <!-- Back Link -->
+            <a href="index.html#work"
+                class="inline-flex items-center text-sm text-gray-500 hover:text-primary mb-12 transition-colors"
+                data-i18n="cs_nav_back">
+                ← Volver al inicio
+            </a>
+
+            <!-- Hero -->
+            <header class="mb-16">
+                <h1 class="text-4xl md:text-6xl font-bold mb-8 dark:text-white" data-i18n="cs_hero_title">
+                    Dashboard Fintech DataSur
+                </h1>
+
+                <div class="flex flex-wrap gap-8 py-8 border-y border-gray-200 dark:border-gray-800">
+                    <div>
+                        <span class="block text-xs font-semibold text-primary uppercase tracking-wider mb-1"
+                            data-i18n="cs_meta_client">CLIENTE</span>
+                        <span class="text-lg font-medium dark:text-gray-200" data-i18n="cs_client_val">DataSur</span>
+                    </div>
+                    <div>
+                        <span class="block text-xs font-semibold text-primary uppercase tracking-wider mb-1"
+                            data-i18n="cs_meta_role">ROL</span>
+                        <span class="text-lg font-medium dark:text-gray-200" data-i18n="cs_role_val">Diseño UI/UX •
+                            Desarrollo Frontend</span>
+                    </div>
+                    <div>
+                        <span class="block text-xs font-semibold text-primary uppercase tracking-wider mb-1"
+                            data-i18n="cs_meta_date">FECHA</span>
+                        <span class="text-lg font-medium dark:text-gray-200" data-i18n="cs_date_val">Octubre 2023</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Image -->
+            <div class="mb-16 rounded-2xl overflow-hidden shadow-2xl bg-gray-900 border border-gray-800">
+                <img src="img/fintech-dashboard-mockup-laptop-1.png" alt="Fintech Dashboard Preview"
+                    class="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity duration-500">
+            </div>
+
+            <!-- Content -->
+            <div class="grid md:grid-cols-3 gap-12 mb-20">
+                <div class="md:col-span-1">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white" data-i18n="cs_challenge_title">El Desafío</h2>
+                </div>
+                <div class="md:col-span-2">
+                    <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="cs_challenge_text">
+                        DataSur operaba con una plataforma legacy que sufría de graves problemas de usabilidad y
+                        rendimiento.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12 mb-20">
+                <div class="md:col-span-1">
+                    <h2 class="text-2xl font-bold mb-4 dark:text-white" data-i18n="cs_solution_title">La Solución</h2>
+                </div>
+                <div class="md:col-span-2">
+                    <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed" data-i18n="cs_solution_text">
+                        Implementamos un sistema de diseño atómico completo para garantizar consistencia visual.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Results Stats -->
+            <div class="bg-gray-50 dark:bg-gray-900 rounded-3xl p-8 md:p-12 mb-20">
+                <h2 class="text-2xl font-bold mb-10 text-center dark:text-white" data-i18n="cs_results_title">Los
+                    Resultados</h2>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="p-4">
+                        <span class="block text-4xl md:text-5xl font-bold text-primary mb-2">40%</span>
+                        <span class="text-sm font-medium text-gray-600 dark:text-gray-400 uppercase tracking-wide"
+                            data-i18n="cs_results_text_1">reducción en tiempo de tareas</span>
+                    </div>
+                    <div class="p-4 border-t md:border-t-0 md:border-l border-gray-200 dark:border-gray-800">
+                        <span class="block text-4xl md:text-5xl font-bold text-primary mb-2">100ms</span>
+                        <span class="text-sm font-medium text-gray-600 dark:text-gray-400 uppercase tracking-wide"
+                            data-i18n="cs_results_text_2">Carga instantánea</span>
+                    </div>
+                    <div class="p-4 border-t md:border-t-0 md:border-l border-gray-200 dark:border-gray-800">
+                        <span class="block text-4xl md:text-5xl font-bold text-primary mb-2">100%</span>
+                        <span class="text-sm font-medium text-gray-600 dark:text-gray-400 uppercase tracking-wide"
+                            data-i18n="cs_results_text_3">Adopción en 2 semanas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery -->
+            <div class="grid gap-8 mb-20">
+                <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800">
+                    <img src="img/fintech-dashboard-mockup-laptop-2.png" alt="Dashboard Vista 2" class="w-full h-auto">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800">
+                    <img src="img/fintech-dashboard-mockup-laptop-3.png" alt="Dashboard Vista 3" class="w-full h-auto">
+                </div>
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800">
+                        <img src="img/fintech-dashboard-mockup-laptop-4.png" alt="Dashboard Vista 4"
+                            class="w-full h-auto">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800">
+                        <img src="img/fintech-dashboard-mockup-laptop-5.png" alt="Dashboard Vista 5"
+                            class="w-full h-auto">
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-800">
+                    <img src="img/fintech-dashboard-mockup-mobile.png" alt="Mobile Views" class="w-full h-auto">
+                </div>
+                <p class="text-center text-sm text-gray-500 italic mt-4" data-i18n="cs_gallery_caption">Vista detallada
+                    del panel de control principal y vistas móviles.</p>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="py-12 px-6 border-t border-border-light dark:border-border-dark bg-surface-light dark:bg-black">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div class="mb-8 md:mb-0">
+                <div class="flex items-center gap-2 mb-4">
+                    <span class="relative flex h-3 w-3">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                    </span>
+                    <span class="logo-text text-xl font-bold text-gray-900 dark:text-white"
+                        style="font-family: 'Exo 2', sans-serif; font-weight: 900; font-style: italic;"><span
+                            class="logo-default">planetar</span><span class="logo-hover">plạnetạr</span></span>
+                </div>
+                <p class="text-xs text-gray-500 max-w-xs" data-i18n="footer_rights">
+                    Ejecución fluida de diseño a código para startups y visionarios.
+                    <br />© Copyright 2026. Todos los derechos reservados.
+                </p>
+            </div>
+            <div class="flex gap-16 text-sm">
+                <div class="flex flex-col gap-3">
+                    <span class="font-bold text-gray-900 dark:text-white">Redes</span>
+                    <a class="text-gray-500 hover:text-primary transition-colors" href="#">Twitter</a>
+                    <a class="text-gray-500 hover:text-primary transition-colors" href="#">LinkedIn</a>
+                    <a class="text-gray-500 hover:text-primary transition-colors" href="#">GitHub</a>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <span class="font-bold text-gray-900 dark:text-white">Legal</span>
+                    <a class="text-gray-500 hover:text-primary transition-colors" href="#">Términos</a>
+                    <a class="text-gray-500 hover:text-primary transition-colors" href="#">Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
